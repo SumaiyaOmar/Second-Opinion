@@ -21,7 +21,7 @@ def navigation():
 <a href="#try-it-section" target="_self">Try it</a>
 <a href="#benchmark-evidence-section" target="_self">Evidence</a>
 <a href="#about-section" target="_self">About</a>
-<a class="so-github" href="#github-repository" target="_self" aria-label="GitHub repository — public URL coming soon">GitHub ↗</a>
+<a class="so-github" href="https://github.com/SumaiyaOmar/Second-Opinion" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository (opens in a new tab)">GitHub ↗</a>
 </div></nav>''', unsafe_allow_html=True)
 
 

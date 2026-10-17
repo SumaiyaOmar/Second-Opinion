@@ -21,6 +21,11 @@ class SiteNavigationTests(unittest.TestCase):
             self.assertIn(f'href="#{anchor}"', html)
             self.assertIn(f'id="{anchor}"', html)
         self.assertIn('aria-label="Main navigation"', html)
+        navbar = next(n.value for n in app.markdown if '<nav class="so-navbar"' in n.value)
+        self.assertIn('<a class="so-github" href="https://github.com/SumaiyaOmar/Second-Opinion" target="_blank" rel="noopener noreferrer"', navbar)
+        self.assertNotIn('href="#github-repository"', navbar)
+        for anchor in ("home-section", "how-it-works-section", "try-it-section", "benchmark-evidence-section", "about-section"):
+            self.assertIn(f'href="#{anchor}" target="_self"', navbar)
         self.assertIn('target="_self"', html)
         self.assertIn("Public repository URL coming soon.", html)
         for title in ("Interpret the claim", "Map the data", "Verify the numbers", "Look for hidden patterns",
