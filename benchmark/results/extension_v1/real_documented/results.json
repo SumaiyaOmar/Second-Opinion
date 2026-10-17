@@ -1,0 +1,447 @@
+[
+  {
+    "case_id": "kidney-stones-1986",
+    "split": "real_documented",
+    "variant": "plain",
+    "expected": {
+      "case_id": "kidney-stones-1986",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": null,
+      "source_title": "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy",
+      "authors": [
+        "C R Charig",
+        "D R Webb",
+        "S R Payne",
+        "J E Wickham"
+      ],
+      "year": 1986,
+      "doi": "10.1136/bmj.292.6524.879",
+      "pmid": "3083922",
+      "source_url": "https://www.bmj.com/content/292/6524/879",
+      "verification": "Bibliography and aggregate 273/350 versus 289/350 verified against the publisher abstract. Stratum counts are the published example explicitly supplied by the user and cross-checked against the UCSD teaching transcription linked in notes.",
+      "observational_caution": "Documented observational treatment comparison. Do not infer causal superiority of either treatment; stone size is associated with both treatment selection and outcomes.",
+      "split": "real_documented",
+      "provenance": "Charig CR, Webb DR, Payne SR, Wickham JE. BMJ 1986;292:879-882. doi:10.1136/bmj.292.6524.879. PMID:3083922.",
+      "transcription_notes": "Only the requested open-surgery and percutaneous arms are included. Counts sum to 273/350 and 289/350. Stratum transcription also appears at https://cseweb.ucsd.edu/classes/sp16/cse21-bd/slides/day21_S16_Lecture_B.pdf . Binary expansion is a computational representation, not recovered patient-level data. Runtime loading is entirely local.",
+      "representation_note": "Expanded anonymous binary outcomes reproduce published count cells only; no patient covariates, order or records are reconstructed."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 19.952583799982676,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 17238,
+        "completion_tokens": 3293,
+        "total_tokens": 20531,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "kidney-stones-1986",
+    "split": "real_documented",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "kidney-stones-1986",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": null,
+      "source_title": "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy",
+      "authors": [
+        "C R Charig",
+        "D R Webb",
+        "S R Payne",
+        "J E Wickham"
+      ],
+      "year": 1986,
+      "doi": "10.1136/bmj.292.6524.879",
+      "pmid": "3083922",
+      "source_url": "https://www.bmj.com/content/292/6524/879",
+      "verification": "Bibliography and aggregate 273/350 versus 289/350 verified against the publisher abstract. Stratum counts are the published example explicitly supplied by the user and cross-checked against the UCSD teaching transcription linked in notes.",
+      "observational_caution": "Documented observational treatment comparison. Do not infer causal superiority of either treatment; stone size is associated with both treatment selection and outcomes.",
+      "split": "real_documented",
+      "provenance": "Charig CR, Webb DR, Payne SR, Wickham JE. BMJ 1986;292:879-882. doi:10.1136/bmj.292.6524.879. PMID:3083922.",
+      "transcription_notes": "Only the requested open-surgery and percutaneous arms are included. Counts sum to 273/350 and 289/350. Stratum transcription also appears at https://cseweb.ucsd.edu/classes/sp16/cse21-bd/slides/day21_S16_Lecture_B.pdf . Binary expansion is a computational representation, not recovered patient-level data. Runtime loading is entirely local.",
+      "representation_note": "Expanded anonymous binary outcomes reproduce published count cells only; no patient covariates, order or records are reconstructed."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate success was 0.78 for Open surgery and 0.825714285714286 for Percutaneous nephrolithotomy. Every underlying segment declined. The aggregate and every underlying segment moved in opposite numeric directions. The aggregate change is consistent with changing segment composition rather than an improvement shared across segments. The conclusion was sensitive to: leave_one_segment_out, outlier_removal, mean_vs_median. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 0 of 4 applicable checks; 3 failed; 1 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 0.8257142857142857,
+          "right": 0.78,
+          "observation_counts": {
+            "left": {
+              "rows": 350,
+              "non_missing": 350
+            },
+            "right": {
+              "rows": 350,
+              "non_missing": 350
+            }
+          }
+        },
+        "difference": 0.04571428571428571,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "Large",
+            "left_count": 80,
+            "left_sum": 55.0,
+            "left_mean": 0.6875,
+            "left": 0.6875,
+            "right_count": 263,
+            "right_sum": 192.0,
+            "right_mean": 0.7300380228136882,
+            "right": 0.7300380228136882,
+            "change": -0.04253802281368824,
+            "mean_change": -0.04253802281368824
+          },
+          {
+            "segment": "Small",
+            "left_count": 270,
+            "left_sum": 234.0,
+            "left_mean": 0.8666666666666667,
+            "left": 0.8666666666666667,
+            "right_count": 87,
+            "right_sum": 81.0,
+            "right_mean": 0.9310344827586207,
+            "right": 0.9310344827586207,
+            "change": -0.06436781609195397,
+            "mean_change": -0.06436781609195397
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 0.8257142857142857,
+            "right": 0.78,
+            "change": 0.04571428571428571,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 350,
+              "right": 350
+            }
+          },
+          "within_effect": -0.053671217385603764,
+          "mix_effect": 0.09938550309988942,
+          "volume_effect": 0.0,
+          "reconstructed_change": 0.04571428571428565,
+          "residual": 5.551115123125783e-17,
+          "segment_contributions": [
+            {
+              "segment": "Large",
+              "within": -0.020843631178707234,
+              "mix": -0.37058494024986427
+            },
+            {
+              "segment": "Small",
+              "within": -0.03282758620689653,
+              "mix": 0.4699704433497537
+            }
+          ],
+          "material_threshold": 0.015305672048549318,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 0.3753990999830421,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "kidney-stones-1986",
+    "split": "real_documented",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "kidney-stones-1986",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": null,
+      "source_title": "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy",
+      "authors": [
+        "C R Charig",
+        "D R Webb",
+        "S R Payne",
+        "J E Wickham"
+      ],
+      "year": 1986,
+      "doi": "10.1136/bmj.292.6524.879",
+      "pmid": "3083922",
+      "source_url": "https://www.bmj.com/content/292/6524/879",
+      "verification": "Bibliography and aggregate 273/350 versus 289/350 verified against the publisher abstract. Stratum counts are the published example explicitly supplied by the user and cross-checked against the UCSD teaching transcription linked in notes.",
+      "observational_caution": "Documented observational treatment comparison. Do not infer causal superiority of either treatment; stone size is associated with both treatment selection and outcomes.",
+      "split": "real_documented",
+      "provenance": "Charig CR, Webb DR, Payne SR, Wickham JE. BMJ 1986;292:879-882. doi:10.1136/bmj.292.6524.879. PMID:3083922.",
+      "transcription_notes": "Only the requested open-surgery and percutaneous arms are included. Counts sum to 273/350 and 289/350. Stratum transcription also appears at https://cseweb.ucsd.edu/classes/sp16/cse21-bd/slides/day21_S16_Lecture_B.pdf . Binary expansion is a computational representation, not recovered patient-level data. Runtime loading is entirely local.",
+      "representation_note": "Expanded anonymous binary outcomes reproduce published count cells only; no patient covariates, order or records are reconstructed."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 0.8257142857142857,
+          "right": 0.78,
+          "observation_counts": {
+            "left": {
+              "rows": 350,
+              "non_missing": 350
+            },
+            "right": {
+              "rows": 350,
+              "non_missing": 350
+            }
+          }
+        },
+        "difference": 0.04571428571428571,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "Large",
+            "left_count": 80,
+            "left_sum": 55.0,
+            "left_mean": 0.6875,
+            "left": 0.6875,
+            "right_count": 263,
+            "right_sum": 192.0,
+            "right_mean": 0.7300380228136882,
+            "right": 0.7300380228136882,
+            "change": -0.04253802281368824,
+            "mean_change": -0.04253802281368824
+          },
+          {
+            "segment": "Small",
+            "left_count": 270,
+            "left_sum": 234.0,
+            "left_mean": 0.8666666666666667,
+            "left": 0.8666666666666667,
+            "right_count": 87,
+            "right_sum": 81.0,
+            "right_mean": 0.9310344827586207,
+            "right": 0.9310344827586207,
+            "change": -0.06436781609195397,
+            "mean_change": -0.06436781609195397
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 0.8257142857142857,
+            "right": 0.78,
+            "change": 0.04571428571428571,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 350,
+              "right": 350
+            }
+          },
+          "within_effect": -0.053671217385603764,
+          "mix_effect": 0.09938550309988942,
+          "volume_effect": 0.0,
+          "reconstructed_change": 0.04571428571428565,
+          "residual": 5.551115123125783e-17,
+          "segment_contributions": [
+            {
+              "segment": "Large",
+              "within": -0.020843631178707234,
+              "mix": -0.37058494024986427
+            },
+            {
+              "segment": "Small",
+              "within": -0.03282758620689653,
+              "mix": 0.4699704433497537
+            }
+          ],
+          "material_threshold": 0.015305672048549318,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 20.590523699996993,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 289,
+        "completion_tokens": 3681,
+        "total_tokens": 3970,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "kidney-stones-1986",
+    "split": "real_documented",
+    "variant": "full",
+    "expected": {
+      "case_id": "kidney-stones-1986",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": null,
+      "source_title": "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy",
+      "authors": [
+        "C R Charig",
+        "D R Webb",
+        "S R Payne",
+        "J E Wickham"
+      ],
+      "year": 1986,
+      "doi": "10.1136/bmj.292.6524.879",
+      "pmid": "3083922",
+      "source_url": "https://www.bmj.com/content/292/6524/879",
+      "verification": "Bibliography and aggregate 273/350 versus 289/350 verified against the publisher abstract. Stratum counts are the published example explicitly supplied by the user and cross-checked against the UCSD teaching transcription linked in notes.",
+      "observational_caution": "Documented observational treatment comparison. Do not infer causal superiority of either treatment; stone size is associated with both treatment selection and outcomes.",
+      "split": "real_documented",
+      "provenance": "Charig CR, Webb DR, Payne SR, Wickham JE. BMJ 1986;292:879-882. doi:10.1136/bmj.292.6524.879. PMID:3083922.",
+      "transcription_notes": "Only the requested open-surgery and percutaneous arms are included. Counts sum to 273/350 and 289/350. Stratum transcription also appears at https://cseweb.ucsd.edu/classes/sp16/cse21-bd/slides/day21_S16_Lecture_B.pdf . Binary expansion is a computational representation, not recovered patient-level data. Runtime loading is entirely local.",
+      "representation_note": "Expanded anonymous binary outcomes reproduce published count cells only; no patient covariates, order or records are reconstructed."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate success was 0.78 for Open surgery and 0.825714285714286 for Percutaneous nephrolithotomy. Every underlying segment declined. The aggregate and every underlying segment moved in opposite numeric directions. The aggregate change is consistent with changing segment composition rather than an improvement shared across segments. The conclusion was sensitive to: leave_one_segment_out, outlier_removal, mean_vs_median. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 0 of 4 applicable checks; 3 failed; 1 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 0.8257142857142857,
+          "right": 0.78,
+          "observation_counts": {
+            "left": {
+              "rows": 350,
+              "non_missing": 350
+            },
+            "right": {
+              "rows": 350,
+              "non_missing": 350
+            }
+          }
+        },
+        "difference": 0.04571428571428571,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "Large",
+            "left_count": 80,
+            "left_sum": 55.0,
+            "left_mean": 0.6875,
+            "left": 0.6875,
+            "right_count": 263,
+            "right_sum": 192.0,
+            "right_mean": 0.7300380228136882,
+            "right": 0.7300380228136882,
+            "change": -0.04253802281368824,
+            "mean_change": -0.04253802281368824
+          },
+          {
+            "segment": "Small",
+            "left_count": 270,
+            "left_sum": 234.0,
+            "left_mean": 0.8666666666666667,
+            "left": 0.8666666666666667,
+            "right_count": 87,
+            "right_sum": 81.0,
+            "right_mean": 0.9310344827586207,
+            "right": 0.9310344827586207,
+            "change": -0.06436781609195397,
+            "mean_change": -0.06436781609195397
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 0.8257142857142857,
+            "right": 0.78,
+            "change": 0.04571428571428571,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 350,
+              "right": 350
+            }
+          },
+          "within_effect": -0.053671217385603764,
+          "mix_effect": 0.09938550309988942,
+          "volume_effect": 0.0,
+          "reconstructed_change": 0.04571428571428565,
+          "residual": 5.551115123125783e-17,
+          "segment_contributions": [
+            {
+              "segment": "Large",
+              "within": -0.020843631178707234,
+              "mix": -0.37058494024986427
+            },
+            {
+              "segment": "Small",
+              "within": -0.03282758620689653,
+              "mix": 0.4699704433497537
+            }
+          ],
+          "material_threshold": 0.015305672048549318,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 53.1313612999802,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 289,
+        "completion_tokens": 3176,
+        "total_tokens": 3465,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "semantic": "development",
+  "semantic_development": "development",
+  "semantic_held_out": "development alias for semantic_mapper_development",
+  "semantic_mapper_development": "development; original mapper-v1 seven cases, IDs/data/gold unchanged",
+  "semantic_final_held_out": "held_out; 12 new cases, seeds 34101-34112; freeze before scoring",
+  "historical_artifacts": "Immutable historical result files retain original names. Neither original seven-case semantic set is independent held-out evidence for future runs."
+}

@@ -1,0 +1,5060 @@
+[
+  {
+    "case_id": "semantic-final-001",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-001",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "renamed_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "clinic_kind",
+        "segment_column": null,
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6259,
+        "completion_tokens": 2384,
+        "total_tokens": 8643,
+        "coverage": "complete"
+      },
+      "latency_seconds": 11.25180649998947
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-002",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-002",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "carrier_band",
+        "segment_column": "carrier_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": true,
+        "tool_selection": [],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6845,
+        "completion_tokens": 6272,
+        "total_tokens": 13117,
+        "coverage": "complete"
+      },
+      "latency_seconds": 32.73199870000826
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-003",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-003",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "relative_window_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "practice_zone",
+        "segment_column": "visit_period",
+        "left": "subject",
+        "right": "baseline",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6268,
+        "completion_tokens": 4876,
+        "total_tokens": 11144,
+        "coverage": "complete"
+      },
+      "latency_seconds": 22.899942699994426
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-004",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-004",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "line_family",
+        "segment_column": "line_family",
+        "left": "2031-08 (subject/new)",
+        "right": "2031-07 (baseline/old)",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6081,
+        "completion_tokens": 5413,
+        "total_tokens": 11494,
+        "coverage": "complete"
+      },
+      "latency_seconds": 28.225673699984327
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-005",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-005",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "engagement_index",
+        "group_column": "subscriber_band",
+        "segment_column": "subscriber_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": true,
+        "tool_selection": [],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 8001,
+        "completion_tokens": 2532,
+        "total_tokens": 10533,
+        "coverage": "complete"
+      },
+      "latency_seconds": 12.678484499978367
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-006",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-006",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "segment_column": "audience_band",
+        "left": "August (2031-08)",
+        "right": "July (2031-07)",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 9320,
+        "completion_tokens": 2587,
+        "total_tokens": 11907,
+        "coverage": "complete"
+      },
+      "latency_seconds": 13.679014699999243
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-007",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-007",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mix_reversal",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 34107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "room_readiness",
+        "group_column": "release_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "property_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": "mix_effect",
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "room_readiness",
+        "group_column": "property_band",
+        "segment_column": "property_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ],
+        "status": "Inconclusive",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 2731,
+        "completion_tokens": 4160,
+        "total_tokens": 6891,
+        "coverage": "complete"
+      },
+      "latency_seconds": 17.407674700021744
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": true
+  },
+  {
+    "case_id": "semantic-final-008",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-008",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_segment",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34108,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": "within_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "client_band",
+        "segment_column": "client_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "within_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6115,
+        "completion_tokens": 5949,
+        "total_tokens": 12064,
+        "coverage": "complete"
+      },
+      "latency_seconds": 27.674165600008564
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-009",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-009",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segment_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34109,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "segment_column": "supplier_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 8938,
+        "completion_tokens": 2785,
+        "total_tokens": 11723,
+        "coverage": "complete"
+      },
+      "latency_seconds": 12.6476576999994
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-010",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-010",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "overall_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34110,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "service_score",
+        "group_column": "desk_band",
+        "segment_column": "desk_band",
+        "left": "2031-08",
+        "right": "2031-07",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6121,
+        "completion_tokens": 5486,
+        "total_tokens": 11607,
+        "coverage": "complete"
+      },
+      "latency_seconds": 25.654714000003878
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-011",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-011",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_category",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34111,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "plant_band",
+        "segment_column": "plant_band",
+        "left": "subject",
+        "right": "baseline",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6114,
+        "completion_tokens": 5727,
+        "total_tokens": 11841,
+        "coverage": "complete"
+      },
+      "latency_seconds": 28.87068079999881
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-012",
+    "split": "semantic_final_held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-final-012",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segmentation_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34112,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": null,
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "delivery_mode",
+        "segment_column": "delivery_mode",
+        "left": "August (2031-08, subject)",
+        "right": "July (2031-07, baseline)",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6113,
+        "completion_tokens": 6796,
+        "total_tokens": 12909,
+        "coverage": "complete"
+      },
+      "latency_seconds": 36.09226820000913
+    },
+    "correct": false,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-001",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-001",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "renamed_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "slot_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'slot_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.021393300005001947,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-002",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-002",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "ledger_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'ledger_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.005954899999778718,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-003",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-003",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "relative_window_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "visit_period",
+        "baseline_bucket": "2031-08",
+        "comparison_bucket": "2031-09",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'visit_period' (valid). baseline_bucket = '2031-08' (valid). comparison_bucket = '2031-09' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Recovered uniquely claim-matched observed bucket."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Recovered uniquely claim-matched observed bucket."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.005613400018773973,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-004",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-004",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": null,
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "batch_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'batch_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.006161500001326203,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-005",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-005",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "panel_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "metric",
+            "column": "engagement_index"
+          },
+          {
+            "role": "metric",
+            "column": "contribution_index"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: Multiple plausible metric columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'panel_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible metric columns require confirmation."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.00476490001892671,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-006",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-006",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "reporting_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "segment",
+            "column": "audience_band"
+          },
+          {
+            "role": "segment",
+            "column": "service_territory"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection.",
+          "segment_column: Multiple plausible segment columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'reporting_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column requires confirmation. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible segment columns require confirmation."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column",
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.0059025000082328916,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-007",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-007",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mix_reversal",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 34107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "room_readiness",
+        "group_column": "release_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "property_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "release_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "release_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection.",
+          "segment_column: Confirm the requested grouping."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'release_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column requires confirmation. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "unresolved",
+            "reason": "Confirm the requested grouping."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column",
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.0052041000162716955,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "semantic-final-008",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-008",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_segment",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34108,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "close_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": "client_band",
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'close_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column = 'client_band' (valid). aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.015908700006548315,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-009",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-009",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segment_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34109,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "stock_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'stock_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.005602300021564588,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-010",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-010",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "overall_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34110,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "calendar_window",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'calendar_window' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.0049177999899256974,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-011",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-011",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_category",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34111,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "review_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection.",
+          "segment_column: Confirm the requested grouping."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'review_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column requires confirmation. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "unresolved",
+            "reason": "Confirm the requested grouping."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column",
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.006041700020432472,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-012",
+    "split": "semantic_final_held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-final-012",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segmentation_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34112,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "session_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: No validated selection."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'session_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "unresolved",
+            "reason": "No validated selection."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 0.007634199981112033,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-001",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-001",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "renamed_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "appointment_attendance",
+        "time_column": "slot_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'appointment_attendance' (valid). time_column = 'slot_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 29.0,
+          "right": 17.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 43.72487590002129,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 269,
+        "completion_tokens": 5102,
+        "total_tokens": 5371,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-002",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-002",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "timely_dispatch",
+        "time_column": "ledger_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'timely_dispatch' (valid). time_column = 'ledger_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 30.0,
+          "right": 18.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 30.53143960001762,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 274,
+        "completion_tokens": 2261,
+        "total_tokens": 2535,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-003",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-003",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "relative_window_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "return_visit_rate",
+        "time_column": "visit_period",
+        "baseline_bucket": "2031-08",
+        "comparison_bucket": "2031-09",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'return_visit_rate' (valid). time_column = 'visit_period' (valid). baseline_bucket = '2031-08' (valid). comparison_bucket = '2031-09' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 43.0,
+          "right": 31.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 54.38735100001213,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 278,
+        "completion_tokens": 4424,
+        "total_tokens": 4702,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-004",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-004",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "first_pass_pct",
+        "time_column": "batch_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'first_pass_pct' (valid). time_column = 'batch_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 40.14701729998342,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 285,
+        "completion_tokens": 4396,
+        "total_tokens": 4681,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-005",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-005",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "panel_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "metric",
+            "column": "contribution_index"
+          },
+          {
+            "role": "metric",
+            "column": "engagement_index"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: Multiple plausible metric columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'panel_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible metric columns require confirmation."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 41.56137739997939,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 268,
+        "completion_tokens": 5114,
+        "total_tokens": 5382,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-006",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-006",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "member_signup_share",
+        "time_column": "reporting_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "segment",
+            "column": "audience_band"
+          },
+          {
+            "role": "segment",
+            "column": "service_territory"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "segment_column: Multiple plausible segment columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column = 'member_signup_share' (valid). time_column = 'reporting_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column requires confirmation. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible segment columns require confirmation."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 27.321695899998304,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 271,
+        "completion_tokens": 2042,
+        "total_tokens": 2313,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-007",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-007",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mix_reversal",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 34107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "room_readiness",
+        "group_column": "release_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "property_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "error",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "ClaimExtractionError",
+      "estimated_api_cost": null,
+      "latency_seconds": 15.354827400005888,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 281,
+        "completion_tokens": 2639,
+        "total_tokens": 2920,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "semantic-final-008",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-008",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_segment",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34108,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "invoice_clearance",
+        "time_column": "close_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": "client_band",
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'invoice_clearance' (valid). time_column = 'close_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column = 'client_band' (valid). aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 36.0,
+          "right": 24.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": "no_material_mix_effect",
+        "segment_results": [
+          {
+            "segment": "assisted",
+            "left_count": 24,
+            "left_sum": 864.0,
+            "left_mean": 36.0,
+            "left": 36.0,
+            "right_count": 24,
+            "right_sum": 576.0,
+            "right_mean": 24.0,
+            "right": 24.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          },
+          {
+            "segment": "direct",
+            "left_count": 24,
+            "left_sum": 864.0,
+            "left_mean": 36.0,
+            "left": 36.0,
+            "right_count": 24,
+            "right_sum": 576.0,
+            "right_mean": 24.0,
+            "right": 24.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 36.0,
+            "right": 24.0,
+            "change": 12.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 48,
+              "right": 48
+            }
+          },
+          "within_effect": 12.0,
+          "mix_effect": 0.0,
+          "volume_effect": 0.0,
+          "reconstructed_change": 12.0,
+          "residual": 0.0,
+          "segment_contributions": [
+            {
+              "segment": "assisted",
+              "within": 6.0,
+              "mix": 0.0
+            },
+            {
+              "segment": "direct",
+              "within": 6.0,
+              "mix": 0.0
+            }
+          ],
+          "material_threshold": 1.2000000000000002,
+          "explanation": "The decomposition shows no material mix effect at the configured threshold; segment effects may still differ."
+        }
+      },
+      "latency_seconds": 49.68196149999858,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 272,
+        "completion_tokens": 2351,
+        "total_tokens": 2623,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-009",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-009",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segment_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34109,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "supply_fill_pct",
+        "time_column": "stock_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'supply_fill_pct' (valid). time_column = 'stock_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 37.0,
+          "right": 25.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 23.000548399984837,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 276,
+        "completion_tokens": 1740,
+        "total_tokens": 2016,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-010",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-010",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "overall_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34110,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "service_score",
+        "time_column": "calendar_window",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'service_score' (valid). time_column = 'calendar_window' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 38.0,
+          "right": 26.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 25.908671199984383,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 276,
+        "completion_tokens": 2412,
+        "total_tokens": 2688,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-011",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-011",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_category",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34111,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "quality_compliance",
+        "time_column": "review_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": "plant_band",
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'quality_compliance' (valid). time_column = 'review_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column = 'plant_band' (valid). aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 39.0,
+          "right": 27.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": "no_material_mix_effect",
+        "segment_results": [
+          {
+            "segment": "assisted",
+            "left_count": 24,
+            "left_sum": 936.0,
+            "left_mean": 39.0,
+            "left": 39.0,
+            "right_count": 24,
+            "right_sum": 648.0,
+            "right_mean": 27.0,
+            "right": 27.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          },
+          {
+            "segment": "direct",
+            "left_count": 24,
+            "left_sum": 936.0,
+            "left_mean": 39.0,
+            "left": 39.0,
+            "right_count": 24,
+            "right_sum": 648.0,
+            "right_mean": 27.0,
+            "right": 27.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 39.0,
+            "right": 27.0,
+            "change": 12.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 48,
+              "right": 48
+            }
+          },
+          "within_effect": 12.0,
+          "mix_effect": 0.0,
+          "volume_effect": 0.0,
+          "reconstructed_change": 12.0,
+          "residual": 0.0,
+          "segment_contributions": [
+            {
+              "segment": "assisted",
+              "within": 6.0,
+              "mix": 0.0
+            },
+            {
+              "segment": "direct",
+              "within": 6.0,
+              "mix": 0.0
+            }
+          ],
+          "material_threshold": 1.2000000000000002,
+          "explanation": "The decomposition shows no material mix effect at the configured threshold; segment effects may still differ."
+        }
+      },
+      "latency_seconds": 39.68921889999183,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 271,
+        "completion_tokens": 1866,
+        "total_tokens": 2137,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-012",
+    "split": "semantic_final_held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-final-012",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segmentation_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34112,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "practice_completion",
+        "time_column": "session_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'practice_completion' (valid). time_column = 'session_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 40.0,
+          "right": 28.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 26.09549999999581,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 271,
+        "completion_tokens": 2395,
+        "total_tokens": 2666,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-001",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-001",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "renamed_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "appointment_attendance",
+        "group_column": "slot_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "appointment_attendance",
+        "time_column": "slot_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'appointment_attendance' (valid). time_column = 'slot_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The audited aggregate appointment_attendance was 17 for 2031-07 and 29 for 2031-08. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 29.0,
+          "right": 17.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 43.81247300002724,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 269,
+        "completion_tokens": 3595,
+        "total_tokens": 3864,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-002",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-002",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "timely_dispatch",
+        "group_column": "ledger_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "timely_dispatch",
+        "time_column": "ledger_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'timely_dispatch' (valid). time_column = 'ledger_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The audited aggregate timely_dispatch was 18 for 2031-07 and 30 for 2031-08. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 30.0,
+          "right": 18.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 40.35033250000561,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 274,
+        "completion_tokens": 2615,
+        "total_tokens": 2889,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-003",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-003",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "relative_window_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": true,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "return_visit_rate",
+        "group_column": "visit_period",
+        "left": "2031-09",
+        "right": "2031-08",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "return_visit_rate",
+        "time_column": "visit_period",
+        "baseline_bucket": "2031-08",
+        "comparison_bucket": "2031-09",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'return_visit_rate' (valid). time_column = 'visit_period' (valid). baseline_bucket = '2031-08' (valid). comparison_bucket = '2031-09' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. The audited aggregate return_visit_rate was 31 for 2031-08 and 43 for 2031-09. Held 3 of 4 applicable checks; 0 failed; 1 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 43.0,
+          "right": 31.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 59.846985000011045,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 278,
+        "completion_tokens": 4073,
+        "total_tokens": 4351,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-004",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-004",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "first_pass_pct",
+        "group_column": "batch_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "first_pass_pct",
+        "time_column": "batch_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "comparison_bucket: Model identified uncertainty in this field; confirm its interpretation."
+        ],
+        "reasoning_summary": "metric_column = 'first_pass_pct' (valid). time_column = 'batch_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (ambiguous). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "ambiguous",
+            "reason": "Model identified uncertainty in this field; confirm its interpretation."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "comparison_bucket"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 44.703147699998226,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 285,
+        "completion_tokens": 4717,
+        "total_tokens": 5002,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-005",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-005",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "panel_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": null,
+        "time_column": "panel_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "metric",
+            "column": "contribution_index"
+          },
+          {
+            "role": "metric",
+            "column": "engagement_index"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "metric_column: Multiple plausible metric columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column requires confirmation. time_column = 'panel_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible metric columns require confirmation."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "metric_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 30.993500799988396,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 268,
+        "completion_tokens": 2220,
+        "total_tokens": 2488,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-006",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-006",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 34106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "member_signup_share",
+        "group_column": "reporting_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "member_signup_share",
+        "time_column": "reporting_cycle",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [
+          {
+            "role": "segment",
+            "column": "audience_band"
+          },
+          {
+            "role": "segment",
+            "column": "service_territory"
+          }
+        ],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "segment_column: Multiple plausible segment columns require confirmation."
+        ],
+        "reasoning_summary": "metric_column = 'member_signup_share' (valid). time_column = 'reporting_cycle' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column requires confirmation. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "ambiguous",
+            "reason": "Multiple plausible segment columns require confirmation."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 20.465238200005842,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 271,
+        "completion_tokens": 1969,
+        "total_tokens": 2240,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-007",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-007",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "mix_reversal",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 34107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "room_readiness",
+        "group_column": "release_cycle",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "property_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "error",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "ClaimExtractionError",
+      "estimated_api_cost": null,
+      "latency_seconds": 11.457119800004875,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 281,
+        "completion_tokens": 2053,
+        "total_tokens": 2334,
+        "coverage": "complete"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "semantic-final-008",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-008",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_segment",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34108,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "mapping_required",
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "failure": "Validated mapping requires user confirmation.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "invoice_clearance",
+        "group_column": "close_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "client_band",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "invoice_clearance",
+        "time_column": "close_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": "client_band",
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": true,
+        "ambiguities": [
+          "segment_column: Model identified uncertainty in this field; confirm its interpretation."
+        ],
+        "reasoning_summary": "metric_column = 'invoice_clearance' (valid). time_column = 'close_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column = 'client_band' (ambiguous). aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "ambiguous",
+            "reason": "Model identified uncertainty in this field; confirm its interpretation."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [
+          "segment_column"
+        ],
+        "internal_diagnostics": []
+      },
+      "latency_seconds": 45.67883489999804,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 272,
+        "completion_tokens": 2159,
+        "total_tokens": 2431,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-009",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-009",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segment_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34109,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "supply_fill_pct",
+        "group_column": "stock_period",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "supply_fill_pct",
+        "time_column": "stock_period",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'supply_fill_pct' (valid). time_column = 'stock_period' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The audited aggregate supply_fill_pct was 25 for 2031-07 and 37 for 2031-08. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 37.0,
+          "right": 25.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 41.400109900016105,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 276,
+        "completion_tokens": 1979,
+        "total_tokens": 2255,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-010",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-010",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "overall_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34110,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "service_score",
+        "group_column": "calendar_window",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "service_score",
+        "time_column": "calendar_window",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'service_score' (valid). time_column = 'calendar_window' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The audited aggregate service_score was 26 for 2031-07 and 38 for 2031-08. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 38.0,
+          "right": 26.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 46.543513999989955,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 276,
+        "completion_tokens": 2506,
+        "total_tokens": 2782,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-011",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-011",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "explicit_category",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34111,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": true,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "quality_compliance",
+        "group_column": "review_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": "plant_band",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "quality_compliance",
+        "time_column": "review_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": "plant_band",
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'quality_compliance' (valid). time_column = 'review_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). segment_column = 'plant_band' (valid). aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. The audited aggregate quality_compliance was 27 for 2031-07 and 39 for 2031-08. Held 2 of 5 applicable checks; 0 failed; 3 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 39.0,
+          "right": 27.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": "no_material_mix_effect",
+        "segment_results": [
+          {
+            "segment": "assisted",
+            "left_count": 24,
+            "left_sum": 936.0,
+            "left_mean": 39.0,
+            "left": 39.0,
+            "right_count": 24,
+            "right_sum": 648.0,
+            "right_mean": 27.0,
+            "right": 27.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          },
+          {
+            "segment": "direct",
+            "left_count": 24,
+            "left_sum": 936.0,
+            "left_mean": 39.0,
+            "left": 39.0,
+            "right_count": 24,
+            "right_sum": 648.0,
+            "right_mean": 27.0,
+            "right": 27.0,
+            "change": 12.0,
+            "mean_change": 12.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 39.0,
+            "right": 27.0,
+            "change": 12.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 48,
+              "right": 48
+            }
+          },
+          "within_effect": 12.0,
+          "mix_effect": 0.0,
+          "volume_effect": 0.0,
+          "reconstructed_change": 12.0,
+          "residual": 0.0,
+          "segment_contributions": [
+            {
+              "segment": "assisted",
+              "within": 6.0,
+              "mix": 0.0
+            },
+            {
+              "segment": "direct",
+              "within": 6.0,
+              "mix": 0.0
+            }
+          ],
+          "material_threshold": 1.2000000000000002,
+          "explanation": "The decomposition shows no material mix effect at the configured threshold; segment effects may still differ."
+        }
+      },
+      "latency_seconds": 39.39531249998254,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 271,
+        "completion_tokens": 2446,
+        "total_tokens": 2717,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-final-012",
+    "split": "semantic_final_held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-final-012",
+      "split": "semantic_final_held_out",
+      "evaluation_role": "held_out",
+      "case_type": "no_segmentation_control",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 34112,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+    },
+    "prediction": {
+      "execution_status": "completed",
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "practice_completion",
+        "group_column": "session_month",
+        "left": "2031-08",
+        "right": "2031-07",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "schema_mapping": {
+        "metric_column": "practice_completion",
+        "time_column": "session_month",
+        "baseline_bucket": "2031-07",
+        "comparison_bucket": "2031-08",
+        "segment_column": null,
+        "aggregation": "mean",
+        "candidate_alternatives": [],
+        "needs_confirmation": false,
+        "ambiguities": [],
+        "reasoning_summary": "metric_column = 'practice_completion' (valid). time_column = 'session_month' (valid). baseline_bucket = '2031-07' (valid). comparison_bucket = '2031-08' (valid). No segment selected; segmentation was not requested. aggregation = 'mean' (valid).",
+        "field_validity": {
+          "metric_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "time_column": {
+            "status": "valid",
+            "reason": "Available role-compatible column."
+          },
+          "segment_column": {
+            "status": "not_required",
+            "reason": "Claim does not request segmentation; proposed segment removed."
+          },
+          "baseline_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "comparison_bucket": {
+            "status": "valid",
+            "reason": "Claim ordering matches observed label."
+          },
+          "aggregation": {
+            "status": "valid",
+            "reason": "Supported aggregation."
+          }
+        },
+        "confirmation_fields": [],
+        "internal_diagnostics": []
+      },
+      "corrected_conclusion": "The audited aggregate practice_completion was 28 for 2031-07 and 40 for 2031-08. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 40.0,
+          "right": 28.0,
+          "observation_counts": {
+            "left": {
+              "rows": 48,
+              "non_missing": 48
+            },
+            "right": {
+              "rows": 48,
+              "non_missing": 48
+            }
+          }
+        },
+        "difference": 12.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 36.08186599999317,
+      "model_usage": {
+        "model_calls": 3,
+        "prompt_tokens": 271,
+        "completion_tokens": 3242,
+        "total_tokens": 3513,
+        "coverage": "partial: core mapper and verdict token usage unavailable"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  }
+]

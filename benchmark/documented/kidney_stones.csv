@@ -1,0 +1,5 @@
+treatment,stone_size,successes,patients
+Open surgery,Small,81,87
+Percutaneous nephrolithotomy,Small,234,270
+Open surgery,Large,192,263
+Percutaneous nephrolithotomy,Large,55,80

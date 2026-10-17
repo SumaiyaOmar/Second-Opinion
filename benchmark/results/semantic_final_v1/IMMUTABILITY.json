@@ -1,0 +1,14 @@
+{
+  "sealed_at_utc": "2026-10-16T19:21:24.610730+00:00",
+  "evaluation_invocations": 1,
+  "case_variant_outcomes": 48,
+  "frozen_input_manifest_sha256": "57380eb5da872282849031717a9d090113fcc44ae8fd756a635657f1d917ea26",
+  "sha256": {
+    "mapping_counts.json": "2b6670a797f661dec018aae0b7183bad979b772f30a0c7a39d7d63940bd71de5",
+    "REPORT.md": "35411139671100cf9bb09c43fdca8b0686e386168258a318e03ee16fe0894480",
+    "results.csv": "3f3501868565080aa66aaabe0c7e1c605b73f881405e94d8c75beca840d21fe3",
+    "results.json": "c3c0d8d2376a7a480342f123c0f5878cc047df9300484f822b18b21bb623cf41",
+    "summary.json": "1f3e734d6c48ff11ed317f7b618b8010b155b5778922ed4434eb6af8e58070f6",
+    "summary.md": "f8402519332b681acbbff743d439a4fce1ed4a9fb352bb5b98f95a9f7ababf61"
+  }
+}

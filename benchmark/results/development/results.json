@@ -1,0 +1,890 @@
+[
+  {
+    "case_id": "development-001",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-001",
+      "split": "development",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 6.900023436173797e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-002",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-002",
+      "split": "development",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 5.2000104915350676e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-003",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-003",
+      "split": "development",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 1.8999853637069464e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-004",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-004",
+      "split": "development",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 5.80001506023109e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-005",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-005",
+      "split": "development",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1107,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 6.400019628927112e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-006",
+    "split": "development",
+    "variant": "plain",
+    "expected": {
+      "case_id": "development-006",
+      "split": "development",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 1108,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 1.800013706088066e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-001",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-001",
+      "split": "development",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.13339460000861436,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "development-002",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-002",
+      "split": "development",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.00018199998885393143,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-003",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-003",
+      "split": "development",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "outlier",
+      "predicted_driver": "outlier_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.056932900013634935,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "development-004",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-004",
+      "split": "development",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "window",
+      "predicted_driver": "window_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.06513620002078824,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "development-005",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-005",
+      "split": "development",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1107,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.018353699997533113,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-006",
+    "split": "development",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "development-006",
+      "split": "development",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 1108,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 0.06225419999100268,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-001",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-001",
+      "split": "development",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 3.300025127828121e-06,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-002",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-002",
+      "split": "development",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 9.00006853044033e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-003",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-003",
+      "split": "development",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 7.00005330145359e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-004",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-004",
+      "split": "development",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 7.00005330145359e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-005",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-005",
+      "split": "development",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1107,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 7.00005330145359e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-006",
+    "split": "development",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "development-006",
+      "split": "development",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 1108,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 6.999762263149023e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-001",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-001",
+      "split": "development",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 8.00006091594696e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-002",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-002",
+      "split": "development",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 7.00005330145359e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-003",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-003",
+      "split": "development",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 6.00004568696022e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-004",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-004",
+      "split": "development",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 1106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 7.00005330145359e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "development-005",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-005",
+      "split": "development",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 1107,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 6.00004568696022e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "development-006",
+    "split": "development",
+    "variant": "full",
+    "expected": {
+      "case_id": "development-006",
+      "split": "development",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 1108,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "not_run",
+      "failure": "Live API disabled; variant not replaced by an offline approximation.",
+      "latency_seconds": 8.00006091594696e-07,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  }
+]

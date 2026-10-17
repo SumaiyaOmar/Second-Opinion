@@ -1,0 +1,257 @@
+{
+  "source": "extension_v1/semantic/results.json",
+  "role": "development only from this point forward",
+  "cases": [
+    {
+      "case_id": "semantic-001",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "bucket mapping failure",
+        "extraction failure",
+        "schema mapping failure",
+        "tool-selection failure"
+      ],
+      "field_mismatches": {
+        "claim_type": {
+          "expected": "comparison",
+          "observed": "causal"
+        },
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "left": {
+          "expected": "2026-03",
+          "observed": "subject"
+        },
+        "right": {
+          "expected": "2026-02",
+          "observed": "baseline"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "grp"
+        },
+        "tool_selection": {
+          "expected": [
+            "audit",
+            "critic"
+          ],
+          "observed": [
+            "abstain"
+          ]
+        }
+      },
+      "execution_status": "completed",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": "Inconclusive"
+    },
+    {
+      "case_id": "semantic-002",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "ambiguity handled incorrectly",
+        "extraction failure",
+        "schema mapping failure"
+      ],
+      "field_mismatches": {
+        "claim_type": {
+          "expected": "comparison",
+          "observed": "causal"
+        },
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "grp"
+        },
+        "needs_confirmation": {
+          "expected": false,
+          "observed": true
+        }
+      },
+      "execution_status": "mapping_required",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": null
+    },
+    {
+      "case_id": "semantic-003",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "extraction failure",
+        "schema mapping failure",
+        "tool-selection failure"
+      ],
+      "field_mismatches": {
+        "claim_type": {
+          "expected": "comparison",
+          "observed": "causal"
+        },
+        "metric_column": {
+          "expected": null,
+          "observed": "conv_pct"
+        },
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "wave"
+        },
+        "tool_selection": {
+          "expected": [
+            "confirmation"
+          ],
+          "observed": [
+            "confirmation",
+            "abstain"
+          ]
+        }
+      },
+      "execution_status": "mapping_required",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": null
+    },
+    {
+      "case_id": "semantic-004",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "ambiguity handled incorrectly",
+        "schema mapping failure",
+        "tool-selection failure"
+      ],
+      "field_mismatches": {
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "grp"
+        },
+        "needs_confirmation": {
+          "expected": false,
+          "observed": true
+        },
+        "tool_selection": {
+          "expected": [
+            "abstain"
+          ],
+          "observed": [
+            "abstain",
+            "confirmation"
+          ]
+        }
+      },
+      "execution_status": "mapping_required",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": null
+    },
+    {
+      "case_id": "semantic-005",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "extraction failure",
+        "schema mapping failure"
+      ],
+      "field_mismatches": {
+        "claim_type": {
+          "expected": "comparison",
+          "observed": "causal"
+        },
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "region"
+        }
+      },
+      "execution_status": "mapping_required",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": null
+    },
+    {
+      "case_id": "semantic-006",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "ambiguity handled incorrectly",
+        "schema mapping failure",
+        "tool-selection failure"
+      ],
+      "field_mismatches": {
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "segment_column": {
+          "expected": null,
+          "observed": "wave"
+        },
+        "needs_confirmation": {
+          "expected": false,
+          "observed": true
+        },
+        "tool_selection": {
+          "expected": [
+            "audit",
+            "critic"
+          ],
+          "observed": [
+            "confirmation"
+          ]
+        }
+      },
+      "execution_status": "mapping_required",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": null
+    },
+    {
+      "case_id": "semantic-007",
+      "evaluation_role_from_now": "development",
+      "gold_unchanged": true,
+      "root_causes": [
+        "extraction failure",
+        "schema mapping failure",
+        "tool-selection failure"
+      ],
+      "field_mismatches": {
+        "claim_type": {
+          "expected": "comparison",
+          "observed": "causal"
+        },
+        "group_column": {
+          "expected": "wave",
+          "observed": "grp"
+        },
+        "tool_selection": {
+          "expected": [
+            "audit",
+            "investigation",
+            "critic"
+          ],
+          "observed": [
+            "audit",
+            "critic",
+            "investigation",
+            "confirmation",
+            "abstain"
+          ]
+        }
+      },
+      "execution_status": "completed",
+      "downstream_note": "No independent downstream arithmetic defect observed; wrong extraction/mapping blocked or invalidated the analysis.",
+      "predicted_status": "Inconclusive"
+    }
+  ]
+}

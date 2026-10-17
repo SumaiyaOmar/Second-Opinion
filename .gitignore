@@ -1,0 +1,20 @@
+.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local editor/settings
+.vscode/
+
+# Local design reference file
+design-reference

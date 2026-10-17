@@ -1,0 +1,259 @@
+{
+  "split": "real_documented",
+  "case_count": 1,
+  "seeds": [],
+  "configuration": {
+    "critic_rules": {
+      "version": "critic_v1",
+      "iqr_multiplier": 1.5,
+      "minimum_stressed_rows_per_bucket": 2,
+      "median_material_change_fraction": 0.5,
+      "bootstrap_minimum_rows_per_bucket": 20,
+      "bootstrap_resamples": 1000,
+      "bootstrap_seed": 20261016,
+      "bootstrap_percentiles": [
+        2.5,
+        97.5
+      ],
+      "alternative_window": "ISO YYYY-MM or YYYY-MM-DD labels only; adjacent original bins; expand earlier bin by one predecessor and later bin by one successor; require both and no overlap."
+    },
+    "investigator_min_segment_rows": 2,
+    "investigator_material_fraction": 0.1,
+    "verdict_rules_version": "verdict_v1",
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.6",
+      "openai": "3.31.0"
+    },
+    "source_sha256": {
+      "core/claims.py": "9f149a6641afe28474f88b37d2b66cd60738a1fa684c900a862f580b9b3c6f50",
+      "core/auditor.py": "a0392e45ab13c182d662cd81d0d036902d4ec3d815e1e118a5455c3f1451c663",
+      "core/investigator.py": "712ccebcc41a3de1876ccd6ae0127b8b0977e3c0efd387f8400711f8008ecd0b",
+      "core/critic.py": "e9c46fd9cd48d04ef9c8296678f7aa0958a0dc818d49c52de8b8cff2ae461acc",
+      "core/verdict.py": "e114744911be4221a876a3921e2c30364b285f336ceb988c2e7c700fef5addc3",
+      "tools/analytics.py": "67f1726d64aa82e47b4dc900b82e29bde5542c9b5f0b95f72bc4f914b9f20286",
+      "benchmark/cases.py": "bd08e1758eab98f4abcce59964e0983917301dff9cfd7bb026f303cc1dfbb95d",
+      "benchmark/variants.py": "8319c1692eec64f84686b7cbf9e04524136b7831fc3b0a66358cc6a28fb32623",
+      "benchmark/semantic.py": "3f35fd810b96ca6272b94aa6d23be5c648654df1b8b97b8bd3fb6e1757f451e7"
+    }
+  },
+  "case_counts_by_type": {
+    "simpson": 1
+  },
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "metric_definitions": {
+    "error_detection_rate": "Non-control labeled errors with a completed non-Supported prediction and non-null detected error / all attempted labeled errors.",
+    "false_alarm_rate": "Clean controls not completed as Supported with no detected error / all attempted clean controls; execution failures count as alarms.",
+    "final_status_accuracy": "Exact final-status matches / all attempted cases; execution errors are incorrect.",
+    "correct_abstention_rate": "Completed Inconclusive predictions / all attempted should_abstain cases; API failures are not abstentions.",
+    "rank1_driver_accuracy": "Exact top driver matches / attempted cases with a non-null expected_driver.",
+    "per_error_class_accuracy": "Exact status accuracy within each case_type, including clean controls."
+  },
+  "variants": {
+    "plain": {
+      "cases": 1,
+      "attempted": 1,
+      "completed": 1,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 0,
+      "metrics": {
+        "error_detection_rate": 0.0,
+        "false_alarm_rate": null,
+        "final_status_accuracy": 1.0,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 0.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          0,
+          1
+        ],
+        "false_alarm_rate": [
+          0,
+          0
+        ],
+        "final_status_accuracy": [
+          1,
+          1
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          0,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "simpson": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": [
+        {
+          "case_id": "kidney-stones-1986",
+          "expected_status": "Partially supported",
+          "predicted_status": "Partially supported",
+          "expected_driver": "mix_effect",
+          "predicted_driver": null,
+          "execution_status": "completed",
+          "error_type_correct": false
+        }
+      ]
+    },
+    "rules_only": {
+      "cases": 1,
+      "attempted": 1,
+      "completed": 1,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 0,
+      "metrics": {
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": null,
+        "final_status_accuracy": 1.0,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 1.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          1,
+          1
+        ],
+        "false_alarm_rate": [
+          0,
+          0
+        ],
+        "final_status_accuracy": [
+          1,
+          1
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          1,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "simpson": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": []
+    },
+    "no_critic": {
+      "cases": 1,
+      "attempted": 1,
+      "completed": 1,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 0,
+      "metrics": {
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": null,
+        "final_status_accuracy": 1.0,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 1.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          1,
+          1
+        ],
+        "false_alarm_rate": [
+          0,
+          0
+        ],
+        "final_status_accuracy": [
+          1,
+          1
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          1,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "simpson": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": []
+    },
+    "full": {
+      "cases": 1,
+      "attempted": 1,
+      "completed": 1,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 0,
+      "metrics": {
+        "error_detection_rate": 1.0,
+        "false_alarm_rate": null,
+        "final_status_accuracy": 1.0,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 1.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          1,
+          1
+        ],
+        "false_alarm_rate": [
+          0,
+          0
+        ],
+        "final_status_accuracy": [
+          1,
+          1
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          1,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "simpson": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": []
+    }
+  },
+  "limitations": [
+    "Development results are debugging results, not independent evidence.",
+    "Held-out seeds are frozen separately; these tiny structurally matched synthetic cases are not broad real-world generalization evidence.",
+    "Each synthetic split has one case per class; rates have very small denominators.",
+    "All variants receive identical confirmed mappings and row data; model variants additionally use model extraction, so rules-only vs full is not a single-factor ablation.",
+    "Plain Nemotron gets a generic profile and all records, no deterministic comparison, investigation, or stress outputs.",
+    "No-Critic uses an explicitly documented audit/investigation-only decision policy, not the full verdict policy with missing inputs.",
+    "Tool-based error/driver labels use a fixed evidence adapter; they are benchmark categories, not new application analysis rules.",
+    "Rules-only uses a deliberately minimal frozen parser; causal language beyond its literal pattern is not covered.",
+    "Live-model results may change despite temperature zero; there is no provider-side seed guarantee.",
+    "Full variant reports only extraction token usage; explanation tokens are unavailable through the existing Verdict interface. Cost is null, not invented.",
+    "Kidney-stone data are locally transcribed observational counts, expanded anonymously; no patient covariates or causal superiority are inferred.",
+    "Semantic inputs contain schema descriptions but no confirmed mappings. mapping_required is excluded from analytical rates and reported separately as unresolved end-to-end coverage.",
+    "Semantic tool-selection accuracy measures recommended tests, not execution; no-Critic still omits Critic. A fixed mean/greater scaffold applies to this small all-increase semantic split."
+  ]
+}

@@ -1,0 +1,1908 @@
+[
+  {
+    "case_id": "semantic-001",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-001",
+      "split": "semantic",
+      "case_type": "column_alias",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03 (March) - subject",
+        "right": "2026-02 (February) - baseline",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4535,
+        "completion_tokens": 2655,
+        "total_tokens": 7190,
+        "coverage": "complete"
+      },
+      "latency_seconds": 14.169208699982846
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-002",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-002",
+      "split": "semantic",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4542,
+        "completion_tokens": 4329,
+        "total_tokens": 8871,
+        "coverage": "complete"
+      },
+      "latency_seconds": 23.679392899997765
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-003",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-003",
+      "split": "semantic",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 6112,
+        "completion_tokens": 2264,
+        "total_tokens": 8376,
+        "coverage": "complete"
+      },
+      "latency_seconds": 11.604679500014754
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-004",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-004",
+      "split": "semantic",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "subject (March)",
+        "right": "baseline (February)",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Inconclusive",
+        "error_type": "causal",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4550,
+        "completion_tokens": 5929,
+        "total_tokens": 10479,
+        "coverage": "complete"
+      },
+      "latency_seconds": 25.193256500002462
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-005",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-005",
+      "split": "semantic",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "region",
+        "left": "2026-03 (March, subject)",
+        "right": "2026-02 (February, baseline)",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "mix_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 5516,
+        "completion_tokens": 6628,
+        "total_tokens": 12144,
+        "coverage": "complete"
+      },
+      "latency_seconds": 33.25849800001015
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-006",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-006",
+      "split": "semantic",
+      "case_type": "unusual_clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ],
+        "status": "Partially supported",
+        "error_type": "none",
+        "driver": "none"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4542,
+        "completion_tokens": 3693,
+        "total_tokens": 8235,
+        "coverage": "complete"
+      },
+      "latency_seconds": 16.588150899973698
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-007",
+    "split": "semantic",
+    "variant": "plain",
+    "expected": {
+      "case_id": "semantic-007",
+      "split": "semantic",
+      "case_type": "semantic_simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 12107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": "grp",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": "within_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ],
+        "status": "Supported",
+        "error_type": "none",
+        "driver": "within_effect"
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 1329,
+        "completion_tokens": 6576,
+        "total_tokens": 7905,
+        "coverage": "complete"
+      },
+      "latency_seconds": 30.725335399998585
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "semantic-001",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-001",
+      "split": "semantic",
+      "case_type": "column_alias",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "corrected_conclusion": "The audited aggregate conv_pct was 10 for 2026-02 and 20 for 2026-03. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 20.0,
+          "right": 10.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.10081969999009743,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-002",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-002",
+      "split": "semantic",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "latency_seconds": 0.0007056000176817179
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-003",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-003",
+      "split": "semantic",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "latency_seconds": 0.00031380000291392207
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-004",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-004",
+      "split": "semantic",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. Held 0 of 5 applicable checks; 0 failed; 5 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.00044239999260753393,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-005",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-005",
+      "split": "semantic",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "latency_seconds": 0.0003755999787244946
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-006",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-006",
+      "split": "semantic",
+      "case_type": "unusual_clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "corrected_conclusion": "The audited aggregate conv_pct was 10 for 2026-02 and 20 for 2026-03. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 20.0,
+          "right": 10.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.07141400000546128,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-007",
+    "split": "semantic",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "semantic-007",
+      "split": "semantic",
+      "case_type": "semantic_simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 12107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": "grp",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": "grp",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation"
+        ]
+      },
+      "corrected_conclusion": "The audited aggregate conv_pct was 36 for 2026-02 and 74 for 2026-03. Every underlying segment declined. The aggregate and every underlying segment moved in opposite numeric directions. The aggregate change is consistent with changing segment composition rather than an improvement shared across segments. The conclusion was sensitive to: leave_one_segment_out. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 1 of 5 applicable checks; 1 failed; 3 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 74.0,
+          "right": 36.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 38.0,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "high",
+            "left_count": 18,
+            "left_sum": 1440.0,
+            "left_mean": 80.0,
+            "left": 80.0,
+            "right_count": 2,
+            "right_sum": 180.0,
+            "right_mean": 90.0,
+            "right": 90.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          },
+          {
+            "segment": "low",
+            "left_count": 2,
+            "left_sum": 40.0,
+            "left_mean": 20.0,
+            "left": 20.0,
+            "right_count": 18,
+            "right_sum": 540.0,
+            "right_mean": 30.0,
+            "right": 30.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 74.0,
+            "right": 36.0,
+            "change": 38.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 20,
+              "right": 20
+            }
+          },
+          "within_effect": -10.0,
+          "mix_effect": 48.0,
+          "volume_effect": 0.0,
+          "reconstructed_change": 38.0,
+          "residual": 0.0,
+          "segment_contributions": [
+            {
+              "segment": "high",
+              "within": -5.0,
+              "mix": 68.0
+            },
+            {
+              "segment": "low",
+              "within": -5.0,
+              "mix": -20.0
+            }
+          ],
+          "material_threshold": 5.800000000000001,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 0.12380559998564422,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      }
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "semantic-001",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-001",
+      "split": "semantic",
+      "case_type": "column_alias",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation",
+          "confirmation",
+          "abstain",
+          "abstain"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 390,
+        "completion_tokens": 3570,
+        "total_tokens": 3960,
+        "coverage": "complete"
+      },
+      "latency_seconds": 14.550396800012095
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-002",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-002",
+      "split": "semantic",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "error",
+      "failure": "JSONDecodeError",
+      "estimated_api_cost": null,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 392,
+        "completion_tokens": 8192,
+        "total_tokens": 8584,
+        "coverage": "complete"
+      },
+      "latency_seconds": 33.07438100001309
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-003",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-003",
+      "split": "semantic",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 457,
+        "completion_tokens": 1960,
+        "total_tokens": 2417,
+        "coverage": "complete"
+      },
+      "latency_seconds": 10.321162500011269
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-004",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-004",
+      "split": "semantic",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation",
+          "abstain"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 405,
+        "completion_tokens": 4461,
+        "total_tokens": 4866,
+        "coverage": "complete"
+      },
+      "latency_seconds": 19.45090950001031
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-005",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-005",
+      "split": "semantic",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "region",
+        "left": "subject (March)",
+        "right": "baseline (February)",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 20.27061509998748,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 439,
+        "completion_tokens": 4702,
+        "total_tokens": 5141,
+        "coverage": "complete"
+      }
+    },
+    "correct": true,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-006",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-006",
+      "split": "semantic",
+      "case_type": "unusual_clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "error",
+      "failure": "JSONDecodeError",
+      "estimated_api_cost": null,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 397,
+        "completion_tokens": 8192,
+        "total_tokens": 8589,
+        "coverage": "complete"
+      },
+      "latency_seconds": 34.797416599991266
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-007",
+    "split": "semantic",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "semantic-007",
+      "split": "semantic",
+      "case_type": "semantic_simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 12107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": "grp",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation",
+          "abstain"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 384,
+        "completion_tokens": 5940,
+        "total_tokens": 6324,
+        "coverage": "complete"
+      },
+      "latency_seconds": 25.065023500006646
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "semantic-001",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-001",
+      "split": "semantic",
+      "case_type": "column_alias",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12101,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "subject",
+        "right": "baseline",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. Held 0 of 5 applicable checks; 0 failed; 5 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 21.109119100001408,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 390,
+        "completion_tokens": 3752,
+        "total_tokens": 4142,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-002",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-002",
+      "split": "semantic",
+      "case_type": "business_paraphrase",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12102,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 392,
+        "completion_tokens": 4230,
+        "total_tokens": 4622,
+        "coverage": "complete"
+      },
+      "latency_seconds": 17.339748700003838
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-003",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-003",
+      "split": "semantic",
+      "case_type": "ambiguous_metric",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12103,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": null,
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation",
+          "abstain"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 457,
+        "completion_tokens": 4203,
+        "total_tokens": 4660,
+        "coverage": "complete"
+      },
+      "latency_seconds": 14.95342130001518
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-004",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-004",
+      "split": "semantic",
+      "case_type": "mixed_numeric_causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12104,
+      "expected_interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "abstain"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "abstain",
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 405,
+        "completion_tokens": 3347,
+        "total_tokens": 3752,
+        "coverage": "complete"
+      },
+      "latency_seconds": 14.807935700024245
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-005",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-005",
+      "split": "semantic",
+      "case_type": "ambiguous_segment",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 12105,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "region",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 439,
+        "completion_tokens": 4490,
+        "total_tokens": 4929,
+        "coverage": "complete"
+      },
+      "latency_seconds": 19.824296199978562
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-006",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-006",
+      "split": "semantic",
+      "case_type": "unusual_clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 12106,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": null,
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "mapping_required",
+      "failure": "Manual schema/bucket confirmation required.",
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": true,
+        "tool_selection": [
+          "confirmation"
+        ]
+      },
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 397,
+        "completion_tokens": 2560,
+        "total_tokens": 2957,
+        "coverage": "complete"
+      },
+      "latency_seconds": 9.349826899997424
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "semantic-007",
+    "split": "semantic",
+    "variant": "full",
+    "expected": {
+      "case_id": "semantic-007",
+      "split": "semantic",
+      "case_type": "semantic_simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 12107,
+      "expected_interpretation": {
+        "claim_type": "comparison",
+        "metric_column": "conv_pct",
+        "group_column": "wave",
+        "left": "2026-03",
+        "right": "2026-02",
+        "segment_column": "grp",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "investigation",
+          "critic"
+        ]
+      },
+      "provenance": "Frozen semantic evaluation; labels fixed before runs; descriptors are schema documentation, not mappings."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "estimated_api_cost": null,
+      "interpretation": {
+        "claim_type": "causal",
+        "metric_column": "conv_pct",
+        "group_column": "grp",
+        "segment_column": "grp",
+        "left": "2026-03",
+        "right": "2026-02",
+        "needs_confirmation": false,
+        "tool_selection": [
+          "audit",
+          "critic",
+          "investigation",
+          "confirmation",
+          "abstain"
+        ]
+      },
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. Held 0 of 5 applicable checks; 0 failed; 5 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 23.965986399998656,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 384,
+        "completion_tokens": 4725,
+        "total_tokens": 5109,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      }
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  }
+]

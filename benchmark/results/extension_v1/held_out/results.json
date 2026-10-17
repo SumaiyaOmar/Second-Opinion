@@ -1,0 +1,1418 @@
+[
+  {
+    "case_id": "held_out-001",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-001",
+      "split": "held_out",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8101,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": null,
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": null,
+      "execution_status": "error",
+      "failure": "JSONDecodeError",
+      "latency_seconds": 40.368474400020204,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 1430,
+        "completion_tokens": 8192,
+        "total_tokens": 9622,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "held_out-002",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-002",
+      "split": "held_out",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8102,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 13.93674249999458,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4394,
+        "completion_tokens": 2640,
+        "total_tokens": 7034,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-003",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-003",
+      "split": "held_out",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": "outlier_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 19.877380399993854,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 1393,
+        "completion_tokens": 4108,
+        "total_tokens": 5501,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-004",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-004",
+      "split": "held_out",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 14.649956400011433,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4390,
+        "completion_tokens": 2619,
+        "total_tokens": 7009,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "held_out-005",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-005",
+      "split": "held_out",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 8.089339099999052,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 523,
+        "completion_tokens": 1496,
+        "total_tokens": 2019,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-006",
+    "split": "held_out",
+    "variant": "plain",
+    "expected": {
+      "case_id": "held_out-006",
+      "split": "held_out",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 8106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "latency_seconds": 20.39255009999033,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 4390,
+        "completion_tokens": 3867,
+        "total_tokens": 8257,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-001",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-001",
+      "split": "held_out",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8101,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 38 for 2026-02 and 76 for 2026-03. Every underlying segment declined. The aggregate and every underlying segment moved in opposite numeric directions. The aggregate change is consistent with changing segment composition rather than an improvement shared across segments. The conclusion was sensitive to: leave_one_segment_out. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 1 of 5 applicable checks; 1 failed; 3 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 76.0,
+          "right": 38.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 38.0,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "high",
+            "left_count": 18,
+            "left_sum": 1476.0,
+            "left_mean": 82.0,
+            "left": 82.0,
+            "right_count": 2,
+            "right_sum": 184.0,
+            "right_mean": 92.0,
+            "right": 92.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          },
+          {
+            "segment": "low",
+            "left_count": 2,
+            "left_sum": 44.0,
+            "left_mean": 22.0,
+            "left": 22.0,
+            "right_count": 18,
+            "right_sum": 576.0,
+            "right_mean": 32.0,
+            "right": 32.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 76.0,
+            "right": 38.0,
+            "change": 38.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 20,
+              "right": 20
+            }
+          },
+          "within_effect": -10.0,
+          "mix_effect": 48.00000000000001,
+          "volume_effect": 0.0,
+          "reconstructed_change": 38.00000000000001,
+          "residual": -7.105427357601002e-15,
+          "segment_contributions": [
+            {
+              "segment": "high",
+              "within": -5.0,
+              "mix": 69.60000000000001
+            },
+            {
+              "segment": "low",
+              "within": -5.0,
+              "mix": -21.6
+            }
+          ],
+          "material_threshold": 5.800000000000001,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 0.16993400000501424,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-002",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-002",
+      "split": "held_out",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8102,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. Held 0 of 5 applicable checks; 0 failed; 5 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.00015969999367371202,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-003",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-003",
+      "split": "held_out",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "outlier",
+      "predicted_driver": "outlier_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 9 for 2026-02 and 54.95 for 2026-03. The conclusion was sensitive to: outlier_removal, mean_vs_median. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 0 of 4 applicable checks; 2 failed; 2 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 54.95,
+          "right": 9.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 45.95,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.06312880001496524,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-004",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-004",
+      "split": "held_out",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "window",
+      "predicted_driver": "window_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 13 for 2026-02 and 23 for 2026-03. The conclusion was sensitive to: alternative_window. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 3 of 4 applicable checks; 1 failed; 0 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.06699350001872517,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-005",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-005",
+      "split": "held_out",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 13 for 2026-02 and 23 for 2026-03. The available evidence is insufficient for a defensible final conclusion. Held 2 of 4 applicable checks; 0 failed; 2 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 2,
+              "non_missing": 2
+            },
+            "right": {
+              "rows": 2,
+              "non_missing": 2
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.021479700022609904,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-006",
+    "split": "held_out",
+    "variant": "rules_only",
+    "expected": {
+      "case_id": "held_out-006",
+      "split": "held_out",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 8106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 10 for 2026-02 and 20 for 2026-03. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 20.0,
+          "right": 10.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 0.06490369999664836,
+      "model_usage": {
+        "model_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-001",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-001",
+      "split": "held_out",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8101,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 76.0,
+          "right": 38.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 38.0,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "high",
+            "left_count": 18,
+            "left_sum": 1476.0,
+            "left_mean": 82.0,
+            "left": 82.0,
+            "right_count": 2,
+            "right_sum": 184.0,
+            "right_mean": 92.0,
+            "right": 92.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          },
+          {
+            "segment": "low",
+            "left_count": 2,
+            "left_sum": 44.0,
+            "left_mean": 22.0,
+            "left": 22.0,
+            "right_count": 18,
+            "right_sum": 576.0,
+            "right_mean": 32.0,
+            "right": 32.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 76.0,
+            "right": 38.0,
+            "change": 38.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 20,
+              "right": 20
+            }
+          },
+          "within_effect": -10.0,
+          "mix_effect": 48.00000000000001,
+          "volume_effect": 0.0,
+          "reconstructed_change": 38.00000000000001,
+          "residual": -7.105427357601002e-15,
+          "segment_contributions": [
+            {
+              "segment": "high",
+              "within": -5.0,
+              "mix": 69.60000000000001
+            },
+            {
+              "segment": "low",
+              "within": -5.0,
+              "mix": -21.6
+            }
+          ],
+          "material_threshold": 5.800000000000001,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 17.343478900002083,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 282,
+        "completion_tokens": 3221,
+        "total_tokens": 3503,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-002",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-002",
+      "split": "held_out",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8102,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 10.715537200012477,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 286,
+        "completion_tokens": 2666,
+        "total_tokens": 2952,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-003",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-003",
+      "split": "held_out",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 54.95,
+          "right": 9.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 45.95,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 15.351036699983524,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 282,
+        "completion_tokens": 3347,
+        "total_tokens": 3629,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "held_out-004",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-004",
+      "split": "held_out",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 10.57284159999108,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 282,
+        "completion_tokens": 2571,
+        "total_tokens": 2853,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": false
+  },
+  {
+    "case_id": "held_out-005",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-005",
+      "split": "held_out",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 2,
+              "non_missing": 2
+            },
+            "right": {
+              "rows": 2,
+              "non_missing": 2
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 6.760197299998254,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 282,
+        "completion_tokens": 1503,
+        "total_tokens": 1785,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": false,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-006",
+    "split": "held_out",
+    "variant": "no_critic",
+    "expected": {
+      "case_id": "held_out-006",
+      "split": "held_out",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 8106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 20.0,
+          "right": 10.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 9.21485260000918,
+      "model_usage": {
+        "model_calls": 1,
+        "prompt_tokens": 282,
+        "completion_tokens": 2006,
+        "total_tokens": 2288,
+        "coverage": "complete"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-001",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-001",
+      "split": "held_out",
+      "case_type": "simpson",
+      "expected_status": "Partially supported",
+      "expected_error_type": "simpson",
+      "expected_driver": "mix_effect",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8101,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "simpson",
+      "predicted_driver": "mix_effect",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. The audited aggregate score was 38 for 2026-02 and 76 for 2026-03. Every underlying segment declined. The aggregate and every underlying segment moved in opposite numeric directions. The aggregate change is consistent with changing segment composition rather than an improvement shared across segments. The conclusion was sensitive to: leave_one_segment_out. Held 1 of 5 applicable checks; 1 failed; 3 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 76.0,
+          "right": 38.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 38.0,
+        "investigation_finding": "direction_reversal",
+        "segment_results": [
+          {
+            "segment": "high",
+            "left_count": 18,
+            "left_sum": 1476.0,
+            "left_mean": 82.0,
+            "left": 82.0,
+            "right_count": 2,
+            "right_sum": 184.0,
+            "right_mean": 92.0,
+            "right": 92.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          },
+          {
+            "segment": "low",
+            "left_count": 2,
+            "left_sum": 44.0,
+            "left_mean": 22.0,
+            "left": 22.0,
+            "right_count": 18,
+            "right_sum": 576.0,
+            "right_mean": 32.0,
+            "right": 32.0,
+            "change": -10.0,
+            "mean_change": -10.0
+          }
+        ],
+        "mix_shift_evidence": {
+          "overall": {
+            "left": 76.0,
+            "right": 38.0,
+            "change": 38.0,
+            "aggregation": "mean",
+            "row_counts": {
+              "left": 20,
+              "right": 20
+            }
+          },
+          "within_effect": -10.0,
+          "mix_effect": 48.00000000000001,
+          "volume_effect": 0.0,
+          "reconstructed_change": 38.00000000000001,
+          "residual": -7.105427357601002e-15,
+          "segment_contributions": [
+            {
+              "segment": "high",
+              "within": -5.0,
+              "mix": 69.60000000000001
+            },
+            {
+              "segment": "low",
+              "within": -5.0,
+              "mix": -21.6
+            }
+          ],
+          "material_threshold": 5.800000000000001,
+          "explanation": "Evidence supports an aggregate-vs-every-segment direction reversal, consistent with a composition shift."
+        }
+      },
+      "latency_seconds": 18.375193999992916,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 282,
+        "completion_tokens": 1463,
+        "total_tokens": 1745,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-002",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-002",
+      "split": "held_out",
+      "case_type": "causal",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "causal",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8102,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": "causal",
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The available evidence is insufficient for a defensible final conclusion. Held 0 of 5 applicable checks; 0 failed; 5 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Inconclusive",
+        "aggregate_values": {},
+        "difference": null,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 13.786430399981327,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 286,
+        "completion_tokens": 2552,
+        "total_tokens": 2838,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-003",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-003",
+      "split": "held_out",
+      "case_type": "outlier",
+      "expected_status": "Partially supported",
+      "expected_error_type": "outlier",
+      "expected_driver": "outlier_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8103,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "outlier",
+      "predicted_driver": "outlier_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 9 for 2026-02 and 54.95 for 2026-03. The conclusion was sensitive to: outlier_removal, mean_vs_median. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 0 of 4 applicable checks; 2 failed; 2 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 54.95,
+          "right": 9.0,
+          "observation_counts": {
+            "left": {
+              "rows": 20,
+              "non_missing": 20
+            },
+            "right": {
+              "rows": 20,
+              "non_missing": 20
+            }
+          }
+        },
+        "difference": 45.95,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 34.659213999984786,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 282,
+        "completion_tokens": 4038,
+        "total_tokens": 4320,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-004",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-004",
+      "split": "held_out",
+      "case_type": "window",
+      "expected_status": "Partially supported",
+      "expected_error_type": "window",
+      "expected_driver": "window_sensitivity",
+      "should_abstain": false,
+      "is_clean_control": false,
+      "generation_seed": 8104,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Partially supported",
+      "detected_error_type": "window",
+      "predicted_driver": "window_sensitivity",
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 13 for 2026-02 and 23 for 2026-03. The conclusion was sensitive to: alternative_window. Evidence supports only a qualified version of the assertion; unqualified generalization is not supported. Held 3 of 4 applicable checks; 1 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 20.818085600010818,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 282,
+        "completion_tokens": 2061,
+        "total_tokens": 2343,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": true
+  },
+  {
+    "case_id": "held_out-005",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-005",
+      "split": "held_out",
+      "case_type": "insufficient",
+      "expected_status": "Inconclusive",
+      "expected_error_type": "insufficient",
+      "expected_driver": null,
+      "should_abstain": true,
+      "is_clean_control": false,
+      "generation_seed": 8105,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Inconclusive",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": true,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 13 for 2026-02 and 23 for 2026-03. The available evidence is insufficient for a defensible final conclusion. Held 2 of 4 applicable checks; 0 failed; 2 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 23.0,
+          "right": 13.0,
+          "observation_counts": {
+            "left": {
+              "rows": 2,
+              "non_missing": 2
+            },
+            "right": {
+              "rows": 2,
+              "non_missing": 2
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 19.145932000014,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 282,
+        "completion_tokens": 2461,
+        "total_tokens": 2743,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": false,
+    "driver_correct": null
+  },
+  {
+    "case_id": "held_out-006",
+    "split": "held_out",
+    "variant": "full",
+    "expected": {
+      "case_id": "held_out-006",
+      "split": "held_out",
+      "case_type": "clean",
+      "expected_status": "Supported",
+      "expected_error_type": null,
+      "expected_driver": null,
+      "should_abstain": false,
+      "is_clean_control": true,
+      "generation_seed": 8106,
+      "provenance": "Frozen synthetic construction; not independently sampled real-world evidence."
+    },
+    "prediction": {
+      "predicted_status": "Supported",
+      "detected_error_type": null,
+      "predicted_driver": null,
+      "abstained": false,
+      "execution_status": "completed",
+      "failure": null,
+      "corrected_conclusion": "The audited aggregate score was 10 for 2026-02 and 20 for 2026-03. Evidence supports the assertion within the audited scope; this does not establish causation. Held 4 of 4 applicable checks; 0 failed; 0 inconclusive.",
+      "explanation_source": "nebius_validated",
+      "analytical_evidence": {
+        "audit_status": "Supported",
+        "aggregate_values": {
+          "left": 20.0,
+          "right": 10.0,
+          "observation_counts": {
+            "left": {
+              "rows": 40,
+              "non_missing": 40
+            },
+            "right": {
+              "rows": 40,
+              "non_missing": 40
+            }
+          }
+        },
+        "difference": 10.0,
+        "investigation_finding": null,
+        "segment_results": null,
+        "mix_shift_evidence": null
+      },
+      "latency_seconds": 25.66856970000663,
+      "model_usage": {
+        "model_calls": 2,
+        "prompt_tokens": 282,
+        "completion_tokens": 3644,
+        "total_tokens": 3926,
+        "coverage": "partial: verdict explanation tokens unavailable"
+      },
+      "estimated_api_cost": null
+    },
+    "correct": true,
+    "error_type_correct": true,
+    "driver_correct": null
+  }
+]

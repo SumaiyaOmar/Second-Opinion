@@ -1,0 +1,30 @@
+{
+  "plain": {
+    "correct_automatic_mappings": 0,
+    "correct_confirmation_requests": 2,
+    "incorrect_automatic_mappings": 7,
+    "unnecessary_confirmation_requests": 3,
+    "execution_errors": 0
+  },
+  "rules_only": {
+    "correct_automatic_mappings": 0,
+    "correct_confirmation_requests": 2,
+    "incorrect_automatic_mappings": 0,
+    "unnecessary_confirmation_requests": 10,
+    "execution_errors": 0
+  },
+  "no_critic": {
+    "correct_automatic_mappings": 9,
+    "correct_confirmation_requests": 2,
+    "incorrect_automatic_mappings": 0,
+    "unnecessary_confirmation_requests": 0,
+    "execution_errors": 1
+  },
+  "full": {
+    "correct_automatic_mappings": 7,
+    "correct_confirmation_requests": 2,
+    "incorrect_automatic_mappings": 0,
+    "unnecessary_confirmation_requests": 2,
+    "execution_errors": 1
+  }
+}

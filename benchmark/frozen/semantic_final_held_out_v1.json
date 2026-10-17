@@ -1,0 +1,500 @@
+{
+  "split": "semantic_final_held_out",
+  "evaluation_role": "held_out",
+  "scored_at_freeze": false,
+  "source_sha256": {
+    "core/schema_mapper.py": "529a5ce1fd82603e8b3de5938e5e72f078a0e44f74cf4a59daf51d1fbb600978",
+    "core/schema_mapping_validation.py": "4efaed616e67279f776aeb30428349f22f771052a334e95e9c33f148e0c130e1",
+    "core/claims.py": "9f149a6641afe28474f88b37d2b66cd60738a1fa684c900a862f580b9b3c6f50",
+    "benchmark/mapper_evaluation.py": "f471a2c7c4df58516aaa0897cdccc717fc336104ef6c6391d01a619cdec5bed0",
+    "benchmark/semantic_final_held_out.py": "fb5d1f17d9759e17a6641702ac6c74d00619482ecd8064bcbf9b58167beb6766"
+  },
+  "cases": [
+    {
+      "metadata": {
+        "case_id": "semantic-final-001",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "renamed_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34101,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "appointment_attendance",
+          "group_column": "slot_month",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Average appointment attendance was higher in August than July.",
+      "columns": [
+        "slot_month",
+        "clinic_kind",
+        "appointment_attendance"
+      ],
+      "descriptions": {
+        "appointment_attendance": "Average appointment attendance per equally weighted observation.",
+        "slot_month": "Calendar month of observation, ISO YYYY-MM.",
+        "clinic_kind": "clinic kind; categorical grouping."
+      },
+      "records_sha256": "6ab20b94735dbfb6e6205e017ec951c22b5c6b961ab1359f434064e246fe2f50"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-002",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "business_paraphrase",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34102,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "timely_dispatch",
+          "group_column": "ledger_cycle",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "A larger average share of shipments left on time in August versus July.",
+      "columns": [
+        "ledger_cycle",
+        "carrier_band",
+        "timely_dispatch"
+      ],
+      "descriptions": {
+        "timely_dispatch": "Average timely dispatch per equally weighted observation.",
+        "ledger_cycle": "Calendar month of observation, ISO YYYY-MM.",
+        "carrier_band": "carrier band; categorical grouping."
+      },
+      "records_sha256": "a6387d28d1a0898baf6325b64d8e1321fe575376e82ac661e758f85130e945a3"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-003",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "relative_window_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34103,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "return_visit_rate",
+          "group_column": "visit_period",
+          "left": "2031-09",
+          "right": "2031-08",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "The most recent observed month had a greater average return-visit rate than the prior observed month.",
+      "columns": [
+        "visit_period",
+        "practice_zone",
+        "return_visit_rate"
+      ],
+      "descriptions": {
+        "return_visit_rate": "Average return visit rate per equally weighted observation.",
+        "visit_period": "Calendar month of observation, ISO YYYY-MM.",
+        "practice_zone": "practice zone; categorical grouping."
+      },
+      "records_sha256": "c5630d9a314c957b4d4c9efe4601c8c4e3c69a6dbcde838380bb9df83183711e"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-004",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "mixed_numeric_causal",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "causal",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 34104,
+        "expected_interpretation": {
+          "claim_type": "causal",
+          "metric_column": "first_pass_pct",
+          "group_column": "batch_month",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "abstain"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Average first-pass yield rose from 20 to 32 in August versus July, and the new process caused that increase.",
+      "columns": [
+        "batch_month",
+        "line_family",
+        "first_pass_pct"
+      ],
+      "descriptions": {
+        "first_pass_pct": "Average first pass pct per equally weighted observation.",
+        "batch_month": "Calendar month of observation, ISO YYYY-MM.",
+        "line_family": "line family; categorical grouping."
+      },
+      "records_sha256": "c8682cf33a41c47221b5254bfdeb4a27ce56de6d6a6e71729fa470ae190fc2fd"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-005",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "ambiguous_metric",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "insufficient",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 34105,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": null,
+          "group_column": "panel_period",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": true,
+          "tool_selection": [
+            "confirmation"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Average performance was stronger in August than July.",
+      "columns": [
+        "panel_period",
+        "subscriber_band",
+        "engagement_index",
+        "contribution_index"
+      ],
+      "descriptions": {
+        "engagement_index": "Average engagement index per equally weighted observation.",
+        "panel_period": "Calendar month of observation, ISO YYYY-MM.",
+        "subscriber_band": "subscriber band; categorical grouping.",
+        "contribution_index": "Another business performance measure: average contribution index."
+      },
+      "records_sha256": "0c28f8ffb059dd2157588e6c411109c79b4fdb54c714a54e4f2df187d0957da8"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-006",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "ambiguous_segment",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "insufficient",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 34106,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "member_signup_share",
+          "group_column": "reporting_cycle",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": true,
+          "tool_selection": [
+            "confirmation"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Average membership signup was higher in August versus July across categories.",
+      "columns": [
+        "reporting_cycle",
+        "audience_band",
+        "member_signup_share",
+        "service_territory"
+      ],
+      "descriptions": {
+        "member_signup_share": "Average member signup share per equally weighted observation.",
+        "reporting_cycle": "Calendar month of observation, ISO YYYY-MM.",
+        "audience_band": "audience band; categorical grouping.",
+        "service_territory": "Geographic category."
+      },
+      "records_sha256": "b18b3373701b357f901c808a2a6378331b8397040108cad1cf70df8b2c35fa7c"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-007",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "mix_reversal",
+        "expected_status": "Partially supported",
+        "expected_error_type": "simpson",
+        "expected_driver": "mix_effect",
+        "should_abstain": false,
+        "is_clean_control": false,
+        "generation_seed": 34107,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "room_readiness",
+          "group_column": "release_cycle",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": "property_band",
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "investigation",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Average room readiness rose in August versus July. Test whether property mix conceals lower readiness within each property band.",
+      "columns": [
+        "release_cycle",
+        "property_band",
+        "room_readiness"
+      ],
+      "descriptions": {
+        "room_readiness": "Average room readiness per equally weighted observation.",
+        "release_cycle": "Calendar month of observation, ISO YYYY-MM.",
+        "property_band": "property band; categorical grouping."
+      },
+      "records_sha256": "25f1bc266a56d4ac4a210e8ab829881dda6b0749e769f8679e2b055391edb1fd"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-008",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "explicit_segment",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34108,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "invoice_clearance",
+          "group_column": "close_period",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": "client_band",
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "investigation",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Compare average invoice clearance within each client cohort: August exceeded July.",
+      "columns": [
+        "close_period",
+        "client_band",
+        "invoice_clearance"
+      ],
+      "descriptions": {
+        "invoice_clearance": "Average invoice clearance per equally weighted observation.",
+        "close_period": "Calendar month of observation, ISO YYYY-MM.",
+        "client_band": "client band; categorical grouping."
+      },
+      "records_sha256": "1f565471a032fc7479a093ca982f9be919053ce906721f1de20dae8e1c4ace0d"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-009",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "no_segment_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34109,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "supply_fill_pct",
+          "group_column": "stock_period",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Only compare overall average supply fill in August versus July. No segment breakdown is requested.",
+      "columns": [
+        "stock_period",
+        "supplier_band",
+        "supply_fill_pct",
+        "service_territory"
+      ],
+      "descriptions": {
+        "supply_fill_pct": "Average supply fill pct per equally weighted observation.",
+        "stock_period": "Calendar month of observation, ISO YYYY-MM.",
+        "supplier_band": "supplier band; categorical grouping.",
+        "service_territory": "Geographic category."
+      },
+      "records_sha256": "c0d39d3e4f966a58370241417bb0c2809f67e1bb9affc0ae8927d1922bba400c"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-010",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "overall_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34110,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "service_score",
+          "group_column": "calendar_window",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Overall average service quality was higher in August than July; do not segment this comparison.",
+      "columns": [
+        "calendar_window",
+        "desk_band",
+        "service_score"
+      ],
+      "descriptions": {
+        "service_score": "Average service score per equally weighted observation.",
+        "calendar_window": "Calendar month of observation, ISO YYYY-MM.",
+        "desk_band": "desk band; categorical grouping."
+      },
+      "records_sha256": "74901f0359c770f3b56b3450ad5863ed405a7aba6055602df775d4b763951859"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-011",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "explicit_category",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34111,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "quality_compliance",
+          "group_column": "review_month",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": "plant_band",
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "investigation",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "Report average compliance for each plant category in August versus July.",
+      "columns": [
+        "review_month",
+        "plant_band",
+        "quality_compliance"
+      ],
+      "descriptions": {
+        "quality_compliance": "Average quality compliance per equally weighted observation.",
+        "review_month": "Calendar month of observation, ISO YYYY-MM.",
+        "plant_band": "plant band; categorical grouping."
+      },
+      "records_sha256": "f078cd266aa905891f16a053d3292334589395f264d141906ba67bf75fefc0e0"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-final-012",
+        "split": "semantic_final_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "no_segmentation_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 34112,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "practice_completion",
+          "group_column": "session_month",
+          "left": "2031-08",
+          "right": "2031-07",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "New final frozen semantic set; not scored during reliability implementation. Gold labels fixed independently of predictions."
+      },
+      "claim": "August showed more average practice completion than July, without segmentation.",
+      "columns": [
+        "session_month",
+        "delivery_mode",
+        "practice_completion"
+      ],
+      "descriptions": {
+        "practice_completion": "Average practice completion per equally weighted observation.",
+        "session_month": "Calendar month of observation, ISO YYYY-MM.",
+        "delivery_mode": "delivery mode; categorical grouping."
+      },
+      "records_sha256": "7574758fae3c53282081e2c1408752a7b21b2ea35bc2fc603a9cf372b85a45d6"
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "old_cases_are_development_only": true,
+  "old_gold_labels_unchanged": true,
+  "frozen_held_out_verified": true,
+  "before_full": {
+    "counts": {
+      "claim_type_extraction_accuracy": [
+        2,
+        7
+      ],
+      "metric_column_mapping_accuracy": [
+        6,
+        7
+      ],
+      "time_bucket_mapping_accuracy": [
+        0,
+        7
+      ],
+      "segment_column_mapping_accuracy": [
+        1,
+        7
+      ],
+      "correct_tool_selection": [
+        2,
+        7
+      ],
+      "end_to_end_final_status_accuracy": [
+        0,
+        7
+      ]
+    },
+    "metrics": {
+      "claim_type_extraction_accuracy": 0.2857142857142857,
+      "metric_column_mapping_accuracy": 0.8571428571428571,
+      "time_bucket_mapping_accuracy": 0.0,
+      "segment_column_mapping_accuracy": 0.14285714285714285,
+      "correct_tool_selection": 0.2857142857142857,
+      "end_to_end_final_status_accuracy": 0.0
+    },
+    "mapping_required_cases": [
+      "semantic-002",
+      "semantic-003",
+      "semantic-004",
+      "semantic-005",
+      "semantic-006"
+    ]
+  },
+  "development_after_full": {
+    "counts": {
+      "claim_type_extraction_accuracy": [
+        6,
+        7
+      ],
+      "metric_column_mapping_accuracy": [
+        6,
+        7
+      ],
+      "time_bucket_mapping_accuracy": [
+        6,
+        7
+      ],
+      "segment_column_mapping_accuracy": [
+        6,
+        7
+      ],
+      "correct_tool_selection": [
+        6,
+        7
+      ],
+      "end_to_end_final_status_accuracy": [
+        4,
+        7
+      ]
+    },
+    "metrics": {
+      "claim_type_extraction_accuracy": 0.8571428571428571,
+      "metric_column_mapping_accuracy": 0.8571428571428571,
+      "time_bucket_mapping_accuracy": 0.8571428571428571,
+      "segment_column_mapping_accuracy": 0.8571428571428571,
+      "correct_tool_selection": 0.8571428571428571,
+      "end_to_end_final_status_accuracy": 0.5714285714285714
+    },
+    "mapping_required_cases": [
+      "semantic-003",
+      "semantic-005"
+    ]
+  },
+  "held_out_full": {
+    "counts": {
+      "claim_type_extraction_accuracy": [
+        7,
+        7
+      ],
+      "metric_column_mapping_accuracy": [
+        6,
+        7
+      ],
+      "time_bucket_mapping_accuracy": [
+        5,
+        7
+      ],
+      "segment_column_mapping_accuracy": [
+        5,
+        7
+      ],
+      "correct_tool_selection": [
+        5,
+        7
+      ],
+      "end_to_end_final_status_accuracy": [
+        3,
+        7
+      ]
+    },
+    "metrics": {
+      "claim_type_extraction_accuracy": 1.0,
+      "metric_column_mapping_accuracy": 0.8571428571428571,
+      "time_bucket_mapping_accuracy": 0.7142857142857143,
+      "segment_column_mapping_accuracy": 0.7142857142857143,
+      "correct_tool_selection": 0.7142857142857143,
+      "end_to_end_final_status_accuracy": 0.42857142857142855
+    },
+    "mapping_required_cases": [
+      "semantic-held-out-002",
+      "semantic-held-out-003",
+      "semantic-held-out-005"
+    ]
+  },
+  "mapping_outcomes": {
+    "development": {
+      "counts": {
+        "correct_automatic_mappings": 4,
+        "incorrect_automatic_mappings": 0,
+        "correct_confirmation_requests": 2,
+        "unnecessary_confirmation_requests": 0,
+        "execution_errors": 1
+      },
+      "cases": {
+        "correct_automatic_mappings": [
+          "semantic-001",
+          "semantic-002",
+          "semantic-004",
+          "semantic-006"
+        ],
+        "incorrect_automatic_mappings": [],
+        "correct_confirmation_requests": [
+          "semantic-003",
+          "semantic-005"
+        ],
+        "unnecessary_confirmation_requests": [],
+        "execution_errors": [
+          "semantic-007"
+        ]
+      },
+      "definition": "Automatic mapping requires exact metric, time/buckets, segment/confirmation and mean aggregation. Claim type/tool selection are scored separately. Correct confirmation means a mapping_required response on a gold-ambiguous case; it does not imply all proposed fields are correct."
+    },
+    "held_out": {
+      "counts": {
+        "correct_automatic_mappings": 3,
+        "incorrect_automatic_mappings": 1,
+        "correct_confirmation_requests": 2,
+        "unnecessary_confirmation_requests": 1,
+        "execution_errors": 0
+      },
+      "cases": {
+        "correct_automatic_mappings": [
+          "semantic-held-out-001",
+          "semantic-held-out-004",
+          "semantic-held-out-007"
+        ],
+        "incorrect_automatic_mappings": [
+          "semantic-held-out-006"
+        ],
+        "correct_confirmation_requests": [
+          "semantic-held-out-003",
+          "semantic-held-out-005"
+        ],
+        "unnecessary_confirmation_requests": [
+          "semantic-held-out-002"
+        ],
+        "execution_errors": []
+      },
+      "definition": "Automatic mapping requires exact metric, time/buckets, segment/confirmation and mean aggregation. Claim type/tool selection are scored separately. Correct confirmation means a mapping_required response on a gold-ambiguous case; it does not imply all proposed fields are correct."
+    }
+  },
+  "failures": [
+    {
+      "role": "development",
+      "case_id": "semantic-003",
+      "execution": "mapping_required",
+      "expected_status": "Inconclusive",
+      "predicted_status": null,
+      "mismatches": []
+    },
+    {
+      "role": "development",
+      "case_id": "semantic-005",
+      "execution": "mapping_required",
+      "expected_status": "Inconclusive",
+      "predicted_status": null,
+      "mismatches": []
+    },
+    {
+      "role": "development",
+      "case_id": "semantic-007",
+      "execution": "error",
+      "expected_status": "Partially supported",
+      "predicted_status": null,
+      "mismatches": [
+        "claim_type",
+        "metric_column",
+        "group_column",
+        "left",
+        "right",
+        "segment_column",
+        "needs_confirmation",
+        "tool_selection"
+      ]
+    },
+    {
+      "role": "held_out",
+      "case_id": "semantic-held-out-002",
+      "execution": "mapping_required",
+      "expected_status": "Supported",
+      "predicted_status": null,
+      "mismatches": [
+        "metric_column",
+        "group_column",
+        "left",
+        "right",
+        "needs_confirmation",
+        "tool_selection"
+      ]
+    },
+    {
+      "role": "held_out",
+      "case_id": "semantic-held-out-003",
+      "execution": "mapping_required",
+      "expected_status": "Inconclusive",
+      "predicted_status": null,
+      "mismatches": [
+        "group_column",
+        "left",
+        "right"
+      ]
+    },
+    {
+      "role": "held_out",
+      "case_id": "semantic-held-out-005",
+      "execution": "mapping_required",
+      "expected_status": "Inconclusive",
+      "predicted_status": null,
+      "mismatches": []
+    },
+    {
+      "role": "held_out",
+      "case_id": "semantic-held-out-006",
+      "execution": "completed",
+      "expected_status": "Supported",
+      "predicted_status": "Inconclusive",
+      "mismatches": [
+        "segment_column",
+        "tool_selection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "metadata": {
+      "case_id": "kidney-stones-1986", "case_type": "simpson",
+      "expected_status": "Partially supported", "expected_error_type": "simpson",
+      "expected_driver": "mix_effect", "should_abstain": false,
+      "is_clean_control": false, "generation_seed": null,
+      "source_title": "Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy",
+      "authors": ["C R Charig", "D R Webb", "S R Payne", "J E Wickham"],
+      "year": 1986, "doi": "10.1136/bmj.292.6524.879", "pmid": "3083922",
+      "source_url": "https://www.bmj.com/content/292/6524/879",
+      "verification": "Bibliography and aggregate 273/350 versus 289/350 verified against the publisher abstract. Stratum counts are the published example explicitly supplied by the user and cross-checked against the UCSD teaching transcription linked in notes.",
+      "observational_caution": "Documented observational treatment comparison. Do not infer causal superiority of either treatment; stone size is associated with both treatment selection and outcomes."
+    },
+    "csv_path": "kidney_stones.csv", "format": "binomial_counts",
+    "claim": "The aggregate observed treatment success rate is higher for percutaneous nephrolithotomy than open surgery; this is a descriptive comparison, not evidence of causal superiority.",
+    "mapping": {"confirmed": true, "calculation_type": "two_groups", "metric": "success", "aggregation": "mean", "operator": "greater", "group_column": "treatment", "left": "Percutaneous nephrolithotomy", "right": "Open surgery"},
+    "segment_column": "stone_size",
+    "source_citation": "Charig CR, Webb DR, Payne SR, Wickham JE. BMJ 1986;292:879-882. doi:10.1136/bmj.292.6524.879. PMID:3083922.",
+    "transcription_notes": "Only the requested open-surgery and percutaneous arms are included. Counts sum to 273/350 and 289/350. Stratum transcription also appears at https://cseweb.ucsd.edu/classes/sp16/cse21-bd/slides/day21_S16_Lecture_B.pdf . Binary expansion is a computational representation, not recovered patient-level data. Runtime loading is entirely local."
+  }
+]

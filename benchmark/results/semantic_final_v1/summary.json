@@ -1,0 +1,615 @@
+{
+  "split": "semantic_final_held_out",
+  "evaluation_role": "held_out",
+  "case_count": 12,
+  "seeds": [
+    34101,
+    34102,
+    34103,
+    34104,
+    34105,
+    34106,
+    34107,
+    34108,
+    34109,
+    34110,
+    34111,
+    34112
+  ],
+  "configuration": {
+    "critic_rules": {
+      "version": "critic_v1",
+      "iqr_multiplier": 1.5,
+      "minimum_stressed_rows_per_bucket": 2,
+      "median_material_change_fraction": 0.5,
+      "bootstrap_minimum_rows_per_bucket": 20,
+      "bootstrap_resamples": 1000,
+      "bootstrap_seed": 20261016,
+      "bootstrap_percentiles": [
+        2.5,
+        97.5
+      ],
+      "alternative_window": "ISO YYYY-MM or YYYY-MM-DD labels only; adjacent original bins; expand earlier bin by one predecessor and later bin by one successor; require both and no overlap."
+    },
+    "investigator_min_segment_rows": 2,
+    "investigator_material_fraction": 0.1,
+    "verdict_rules_version": "verdict_v1",
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.6",
+      "openai": "3.31.0"
+    },
+    "source_sha256": {
+      "core/claims.py": "9f149a6641afe28474f88b37d2b66cd60738a1fa684c900a862f580b9b3c6f50",
+      "core/auditor.py": "a0392e45ab13c182d662cd81d0d036902d4ec3d815e1e118a5455c3f1451c663",
+      "core/investigator.py": "712ccebcc41a3de1876ccd6ae0127b8b0977e3c0efd387f8400711f8008ecd0b",
+      "core/critic.py": "e9c46fd9cd48d04ef9c8296678f7aa0958a0dc818d49c52de8b8cff2ae461acc",
+      "core/verdict.py": "e114744911be4221a876a3921e2c30364b285f336ceb988c2e7c700fef5addc3",
+      "core/schema_mapper.py": "529a5ce1fd82603e8b3de5938e5e72f078a0e44f74cf4a59daf51d1fbb600978",
+      "core/schema_mapping_validation.py": "4efaed616e67279f776aeb30428349f22f771052a334e95e9c33f148e0c130e1",
+      "tools/analytics.py": "67f1726d64aa82e47b4dc900b82e29bde5542c9b5f0b95f72bc4f914b9f20286",
+      "benchmark/cases.py": "bd08e1758eab98f4abcce59964e0983917301dff9cfd7bb026f303cc1dfbb95d",
+      "benchmark/variants.py": "8319c1692eec64f84686b7cbf9e04524136b7831fc3b0a66358cc6a28fb32623",
+      "benchmark/semantic.py": "b6a19adcfab8280a0b9a5ef497c821c84523ea7da5888025a461f900ccf401d6",
+      "benchmark/mapper_evaluation.py": "f471a2c7c4df58516aaa0897cdccc717fc336104ef6c6391d01a619cdec5bed0",
+      "benchmark/semantic_held_out.py": "41c8c1493c74b433aa87d71a4d3b2e106cbf20e37baeecd77bcda02f38f900c3",
+      "benchmark/semantic_final_held_out.py": "fb5d1f17d9759e17a6641702ac6c74d00619482ecd8064bcbf9b58167beb6766"
+    }
+  },
+  "case_counts_by_type": {
+    "ambiguous_metric": 1,
+    "ambiguous_segment": 1,
+    "business_paraphrase": 1,
+    "explicit_category": 1,
+    "explicit_segment": 1,
+    "mix_reversal": 1,
+    "mixed_numeric_causal": 1,
+    "no_segment_control": 1,
+    "no_segmentation_control": 1,
+    "overall_control": 1,
+    "relative_window_control": 1,
+    "renamed_control": 1
+  },
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "metric_definitions": {
+    "error_detection_rate": "Non-control labeled errors with a completed non-Supported prediction and non-null detected error / all attempted labeled errors.",
+    "false_alarm_rate": "Clean controls not completed as Supported with no detected error / all attempted clean controls; execution failures count as alarms.",
+    "final_status_accuracy": "Exact final-status matches / all attempted cases; execution errors are incorrect.",
+    "correct_abstention_rate": "Completed Inconclusive predictions / all attempted should_abstain cases; API failures are not abstentions.",
+    "rank1_driver_accuracy": "Exact top driver matches / attempted cases with a non-null expected_driver.",
+    "per_error_class_accuracy": "Exact status accuracy within each case_type, including clean controls."
+  },
+  "variants": {
+    "plain": {
+      "cases": 12,
+      "attempted": 7,
+      "completed": 7,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 5,
+      "metrics": {
+        "error_detection_rate": 0.0,
+        "false_alarm_rate": 0.16666666666666666,
+        "final_status_accuracy": 0.7142857142857143,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 1.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          0,
+          1
+        ],
+        "false_alarm_rate": [
+          1,
+          6
+        ],
+        "final_status_accuracy": [
+          5,
+          7
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          1,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "explicit_category": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "explicit_segment": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "mix_reversal": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "no_segment_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "no_segmentation_control": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "overall_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "renamed_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": [
+        {
+          "case_id": "semantic-final-007",
+          "expected_status": "Partially supported",
+          "predicted_status": "Inconclusive",
+          "expected_driver": "mix_effect",
+          "predicted_driver": "mix_effect",
+          "execution_status": "completed",
+          "error_type_correct": false
+        },
+        {
+          "case_id": "semantic-final-012",
+          "expected_status": "Supported",
+          "predicted_status": "Partially supported",
+          "expected_driver": null,
+          "predicted_driver": "mix_effect",
+          "execution_status": "completed",
+          "error_type_correct": true
+        }
+      ],
+      "interpretation": {
+        "counts": {
+          "claim_type_extraction_accuracy": [
+            9,
+            12
+          ],
+          "metric_column_mapping_accuracy": [
+            11,
+            12
+          ],
+          "time_bucket_mapping_accuracy": [
+            1,
+            12
+          ],
+          "segment_column_mapping_accuracy": [
+            4,
+            12
+          ],
+          "correct_tool_selection": [
+            6,
+            12
+          ],
+          "end_to_end_final_status_accuracy": [
+            5,
+            12
+          ]
+        },
+        "metrics": {
+          "claim_type_extraction_accuracy": 0.75,
+          "metric_column_mapping_accuracy": 0.9166666666666666,
+          "time_bucket_mapping_accuracy": 0.08333333333333333,
+          "segment_column_mapping_accuracy": 0.3333333333333333,
+          "correct_tool_selection": 0.5,
+          "end_to_end_final_status_accuracy": 0.4166666666666667
+        },
+        "mapping_required_cases": [
+          "semantic-final-002",
+          "semantic-final-003",
+          "semantic-final-004",
+          "semantic-final-005",
+          "semantic-final-006"
+        ]
+      }
+    },
+    "rules_only": {
+      "cases": 12,
+      "attempted": 0,
+      "completed": 0,
+      "execution_errors": 0,
+      "not_run": 0,
+      "mapping_required": 12,
+      "metrics": {
+        "error_detection_rate": null,
+        "false_alarm_rate": null,
+        "final_status_accuracy": null,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": null
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          0,
+          0
+        ],
+        "false_alarm_rate": [
+          0,
+          0
+        ],
+        "final_status_accuracy": [
+          0,
+          0
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          0,
+          0
+        ]
+      },
+      "per_error_class_accuracy": {},
+      "failures": [],
+      "interpretation": {
+        "counts": {
+          "claim_type_extraction_accuracy": [
+            12,
+            12
+          ],
+          "metric_column_mapping_accuracy": [
+            1,
+            12
+          ],
+          "time_bucket_mapping_accuracy": [
+            12,
+            12
+          ],
+          "segment_column_mapping_accuracy": [
+            2,
+            12
+          ],
+          "correct_tool_selection": [
+            2,
+            12
+          ],
+          "end_to_end_final_status_accuracy": [
+            0,
+            12
+          ]
+        },
+        "metrics": {
+          "claim_type_extraction_accuracy": 1.0,
+          "metric_column_mapping_accuracy": 0.08333333333333333,
+          "time_bucket_mapping_accuracy": 1.0,
+          "segment_column_mapping_accuracy": 0.16666666666666666,
+          "correct_tool_selection": 0.16666666666666666,
+          "end_to_end_final_status_accuracy": 0.0
+        },
+        "mapping_required_cases": [
+          "semantic-final-001",
+          "semantic-final-002",
+          "semantic-final-003",
+          "semantic-final-004",
+          "semantic-final-005",
+          "semantic-final-006",
+          "semantic-final-007",
+          "semantic-final-008",
+          "semantic-final-009",
+          "semantic-final-010",
+          "semantic-final-011",
+          "semantic-final-012"
+        ]
+      }
+    },
+    "no_critic": {
+      "cases": 12,
+      "attempted": 10,
+      "completed": 9,
+      "execution_errors": 1,
+      "not_run": 0,
+      "mapping_required": 2,
+      "metrics": {
+        "error_detection_rate": 0.5,
+        "false_alarm_rate": 0.0,
+        "final_status_accuracy": 0.9,
+        "correct_abstention_rate": 1.0,
+        "rank1_driver_accuracy": 0.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          1,
+          2
+        ],
+        "false_alarm_rate": [
+          0,
+          8
+        ],
+        "final_status_accuracy": [
+          9,
+          10
+        ],
+        "correct_abstention_rate": [
+          1,
+          1
+        ],
+        "rank1_driver_accuracy": [
+          0,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "business_paraphrase": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "explicit_category": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "explicit_segment": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "mix_reversal": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "mixed_numeric_causal": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "no_segment_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "no_segmentation_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "overall_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "relative_window_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "renamed_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": [
+        {
+          "case_id": "semantic-final-007",
+          "expected_status": "Partially supported",
+          "predicted_status": null,
+          "expected_driver": "mix_effect",
+          "predicted_driver": null,
+          "execution_status": "error",
+          "error_type_correct": false
+        }
+      ],
+      "interpretation": {
+        "counts": {
+          "claim_type_extraction_accuracy": [
+            11,
+            12
+          ],
+          "metric_column_mapping_accuracy": [
+            11,
+            12
+          ],
+          "time_bucket_mapping_accuracy": [
+            11,
+            12
+          ],
+          "segment_column_mapping_accuracy": [
+            11,
+            12
+          ],
+          "correct_tool_selection": [
+            11,
+            12
+          ],
+          "end_to_end_final_status_accuracy": [
+            9,
+            12
+          ]
+        },
+        "metrics": {
+          "claim_type_extraction_accuracy": 0.9166666666666666,
+          "metric_column_mapping_accuracy": 0.9166666666666666,
+          "time_bucket_mapping_accuracy": 0.9166666666666666,
+          "segment_column_mapping_accuracy": 0.9166666666666666,
+          "correct_tool_selection": 0.9166666666666666,
+          "end_to_end_final_status_accuracy": 0.75
+        },
+        "mapping_required_cases": [
+          "semantic-final-005",
+          "semantic-final-006"
+        ]
+      }
+    },
+    "full": {
+      "cases": 12,
+      "attempted": 8,
+      "completed": 7,
+      "execution_errors": 1,
+      "not_run": 0,
+      "mapping_required": 4,
+      "metrics": {
+        "error_detection_rate": 0.0,
+        "false_alarm_rate": 0.2857142857142857,
+        "final_status_accuracy": 0.625,
+        "correct_abstention_rate": null,
+        "rank1_driver_accuracy": 0.0
+      },
+      "metric_counts": {
+        "error_detection_rate": [
+          0,
+          1
+        ],
+        "false_alarm_rate": [
+          2,
+          7
+        ],
+        "final_status_accuracy": [
+          5,
+          8
+        ],
+        "correct_abstention_rate": [
+          0,
+          0
+        ],
+        "rank1_driver_accuracy": [
+          0,
+          1
+        ]
+      },
+      "per_error_class_accuracy": {
+        "business_paraphrase": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "explicit_category": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "mix_reversal": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "no_segment_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "no_segmentation_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "overall_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        },
+        "relative_window_control": {
+          "correct": 0,
+          "cases": 1,
+          "accuracy": 0.0
+        },
+        "renamed_control": {
+          "correct": 1,
+          "cases": 1,
+          "accuracy": 1.0
+        }
+      },
+      "failures": [
+        {
+          "case_id": "semantic-final-003",
+          "expected_status": "Supported",
+          "predicted_status": "Inconclusive",
+          "expected_driver": null,
+          "predicted_driver": null,
+          "execution_status": "completed",
+          "error_type_correct": true
+        },
+        {
+          "case_id": "semantic-final-007",
+          "expected_status": "Partially supported",
+          "predicted_status": null,
+          "expected_driver": "mix_effect",
+          "predicted_driver": null,
+          "execution_status": "error",
+          "error_type_correct": false
+        },
+        {
+          "case_id": "semantic-final-011",
+          "expected_status": "Supported",
+          "predicted_status": "Inconclusive",
+          "expected_driver": null,
+          "predicted_driver": null,
+          "execution_status": "completed",
+          "error_type_correct": true
+        }
+      ],
+      "interpretation": {
+        "counts": {
+          "claim_type_extraction_accuracy": [
+            11,
+            12
+          ],
+          "metric_column_mapping_accuracy": [
+            11,
+            12
+          ],
+          "time_bucket_mapping_accuracy": [
+            11,
+            12
+          ],
+          "segment_column_mapping_accuracy": [
+            9,
+            12
+          ],
+          "correct_tool_selection": [
+            9,
+            12
+          ],
+          "end_to_end_final_status_accuracy": [
+            5,
+            12
+          ]
+        },
+        "metrics": {
+          "claim_type_extraction_accuracy": 0.9166666666666666,
+          "metric_column_mapping_accuracy": 0.9166666666666666,
+          "time_bucket_mapping_accuracy": 0.9166666666666666,
+          "segment_column_mapping_accuracy": 0.75,
+          "correct_tool_selection": 0.75,
+          "end_to_end_final_status_accuracy": 0.4166666666666667
+        },
+        "mapping_required_cases": [
+          "semantic-final-004",
+          "semantic-final-005",
+          "semantic-final-006",
+          "semantic-final-008"
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Development results are debugging results, not independent evidence.",
+    "Held-out seeds are frozen separately; these tiny structurally matched synthetic cases are not broad real-world generalization evidence.",
+    "Each synthetic split has one case per class; rates have very small denominators.",
+    "All variants receive identical confirmed mappings and row data; model variants additionally use model extraction, so rules-only vs full is not a single-factor ablation.",
+    "Plain Nemotron gets a generic profile and all records, no deterministic comparison, investigation, or stress outputs.",
+    "No-Critic uses an explicitly documented audit/investigation-only decision policy, not the full verdict policy with missing inputs.",
+    "Tool-based error/driver labels use a fixed evidence adapter; they are benchmark categories, not new application analysis rules.",
+    "Rules-only uses a deliberately minimal frozen parser; causal language beyond its literal pattern is not covered.",
+    "Live-model results may change despite temperature zero; there is no provider-side seed guarantee.",
+    "Full variant reports only extraction token usage; explanation tokens are unavailable through the existing Verdict interface. Cost is null, not invented.",
+    "Kidney-stone data are locally transcribed observational counts, expanded anonymously; no patient covariates or causal superiority are inferred.",
+    "Semantic inputs contain schema descriptions but no confirmed mappings. mapping_required is excluded from analytical rates and reported separately as unresolved end-to-end coverage.",
+    "Semantic tool-selection accuracy measures recommended tests, not execution; no-Critic still omits Critic. A fixed mean/greater scaffold applies to this small all-increase semantic split."
+  ]
+}

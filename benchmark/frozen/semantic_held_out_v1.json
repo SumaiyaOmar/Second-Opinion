@@ -1,0 +1,294 @@
+{
+  "evaluation_role": "held_out",
+  "frozen_before_first_scored_run": true,
+  "source_sha256": {
+    "core/schema_mapper.py": "7af006e74330757bd576b9caec35d440cbc849bbf8074c0738ea7898e7e9ef77",
+    "core/claims.py": "9f149a6641afe28474f88b37d2b66cd60738a1fa684c900a862f580b9b3c6f50",
+    "benchmark/mapper_evaluation.py": "3f96fae51d0c6bd77793035620e3031233e28494d902f9952354e48cb15b2c8c",
+    "benchmark/semantic_held_out.py": "fe83840f03cacd3d053c474a7c75b905b43935619e4fdbb642142162bd90beea"
+  },
+  "cases": [
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-001",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "renamed_metric_time",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 23111,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "order_yield",
+          "group_column": "cycle_key",
+          "left": "2027-06",
+          "right": "2027-05",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "cycle_key",
+        "traffic_family",
+        "order_yield"
+      ],
+      "claim": "Average checkout completion was higher in June than May.",
+      "schema_descriptions": {
+        "order_yield": "Average checkout completion rate per equally weighted observation.",
+        "cycle_key": "Calendar month of observation in ISO YYYY-MM format.",
+        "traffic_family": "Customer category."
+      },
+      "records_sha256": "ee755c784f51a58cd0406f518018bd26f5a1f5be4df8e993f49684ec96ed0366"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-002",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "paraphrase",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 23112,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "renewal_rate",
+          "group_column": "snapshot",
+          "left": "2027-09",
+          "right": "2027-08",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "snapshot",
+        "account_tier",
+        "renewal_rate"
+      ],
+      "claim": "The fraction of accounts renewing was higher in September than August.",
+      "schema_descriptions": {
+        "renewal_rate": "Average accounts renewing rate per equally weighted observation.",
+        "snapshot": "Calendar month of observation in ISO YYYY-MM format.",
+        "account_tier": "Customer category."
+      },
+      "records_sha256": "6794ebb3e2fa733ac17fa030b04e80264cf91802ad05df1550be0f20fdc2a023"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-003",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "ambiguous_metric",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "insufficient",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 23113,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": null,
+          "group_column": "measurement_month",
+          "left": "2027-11",
+          "right": "2027-10",
+          "segment_column": null,
+          "needs_confirmation": true,
+          "tool_selection": [
+            "confirmation"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "measurement_month",
+        "branch_code",
+        "quality_index",
+        "margin_index"
+      ],
+      "claim": "Business performance improved in November compared with October.",
+      "schema_descriptions": {
+        "quality_index": "Average quality rate per equally weighted observation.",
+        "measurement_month": "Calendar month of observation in ISO YYYY-MM format.",
+        "branch_code": "Customer category.",
+        "margin_index": "Profit margin index; another business performance measure."
+      },
+      "records_sha256": "1f7478e3da7264cacfad727e58f20ec144a85e10d90d0746f851080954a46c23"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-004",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "mixed_numeric_causal",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "causal",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 23114,
+        "expected_interpretation": {
+          "claim_type": "causal",
+          "metric_column": "basket_rate",
+          "group_column": "report_month",
+          "left": "2027-06",
+          "right": "2027-05",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "abstain"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "report_month",
+        "shop_cluster",
+        "basket_rate"
+      ],
+      "claim": "Average purchase completion rose from 15 to 27 in June compared with May, and the redesign caused that increase.",
+      "schema_descriptions": {
+        "basket_rate": "Average purchase completion rate per equally weighted observation.",
+        "report_month": "Calendar month of observation in ISO YYYY-MM format.",
+        "shop_cluster": "Customer category."
+      },
+      "records_sha256": "c9a499c5680b62f85b0b329485770fef22415f7795f4d3fcdb22fb9d405c1d9a"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-005",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "ambiguous_segments",
+        "expected_status": "Inconclusive",
+        "expected_error_type": "insufficient",
+        "expected_driver": null,
+        "should_abstain": true,
+        "is_clean_control": false,
+        "generation_seed": 23115,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "enrollment_pct",
+          "group_column": "survey_cycle",
+          "left": "2027-09",
+          "right": "2027-08",
+          "segment_column": null,
+          "needs_confirmation": true,
+          "tool_selection": [
+            "confirmation"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "survey_cycle",
+        "recruitment_path",
+        "enrollment_pct",
+        "territory_code"
+      ],
+      "claim": "Average enrollment increased in September versus August across segments.",
+      "schema_descriptions": {
+        "enrollment_pct": "Average enrollment rate per equally weighted observation.",
+        "survey_cycle": "Calendar month of observation in ISO YYYY-MM format.",
+        "recruitment_path": "Customer category.",
+        "territory_code": "Geographic segment."
+      },
+      "records_sha256": "809ff0af2ec6b173816d7d0393b805c53e93e56bc5a3883926d97a6ba31e9251"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-006",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "relative_window_control",
+        "expected_status": "Supported",
+        "expected_error_type": null,
+        "expected_driver": null,
+        "should_abstain": false,
+        "is_clean_control": true,
+        "generation_seed": 23116,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "uptake_rate",
+          "group_column": "observed_month",
+          "left": "2027-11",
+          "right": "2027-10",
+          "segment_column": null,
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "critic"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "observed_month",
+        "subscriber_class",
+        "uptake_rate"
+      ],
+      "claim": "The latest observed month had a higher average uptake rate than the previous observed month; no causal explanation is asserted.",
+      "schema_descriptions": {
+        "uptake_rate": "Average uptake rate per equally weighted observation.",
+        "observed_month": "Calendar month of observation in ISO YYYY-MM format.",
+        "subscriber_class": "Customer category."
+      },
+      "records_sha256": "1e56b8870fac01ebf6625db916c82653202972816647cf4d98fde6a1af3da03d"
+    },
+    {
+      "metadata": {
+        "case_id": "semantic-held-out-007",
+        "split": "semantic_held_out",
+        "evaluation_role": "held_out",
+        "case_type": "renamed_mix_reversal",
+        "expected_status": "Partially supported",
+        "expected_error_type": "simpson",
+        "expected_driver": "mix_effect",
+        "should_abstain": false,
+        "is_clean_control": false,
+        "generation_seed": 23117,
+        "expected_interpretation": {
+          "claim_type": "comparison",
+          "metric_column": "fulfillment_pct",
+          "group_column": "release_month",
+          "left": "2027-11",
+          "right": "2027-10",
+          "segment_column": "facility_band",
+          "needs_confirmation": false,
+          "tool_selection": [
+            "audit",
+            "investigation",
+            "critic"
+          ]
+        },
+        "provenance": "Frozen semantic held-out v2; different names, wording, values and seeds; no post-score tuning."
+      },
+      "columns": [
+        "release_month",
+        "facility_band",
+        "fulfillment_pct"
+      ],
+      "claim": "Average fulfillment rose in November versus October. Check whether a shift in facility mix hides lower results within each facility band.",
+      "schema_descriptions": {
+        "fulfillment_pct": "Average fulfillment rate per equally weighted observation.",
+        "release_month": "Calendar month of observation in ISO YYYY-MM format.",
+        "facility_band": "Facility band."
+      },
+      "records_sha256": "5779eda9f49034a99a3d001400c45a09acc92193e5b9bb951c20e3fb253ba1f2"
+    }
+  ]
+}
